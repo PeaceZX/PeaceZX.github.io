@@ -6,17 +6,17 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
   
-  <title>about | peacezx的博客</title>
+  <title>nihao | peacezx的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="keywords" content="C Python MATLAB Unity3D">
-<meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="http://PeaceZX.github.io/about/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="nihao">
+<meta property="og:url" content="http://PeaceZX.github.io/2018/07/22/nihao/index.html">
 <meta property="og:site_name" content="peacezx的博客">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-22T09:40:05.963Z">
+<meta property="og:updated_time" content="2018-07-22T10:44:26.606Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="about">
+<meta name="twitter:title" content="nihao">
   
     <link rel="alternate" href="/atom.xml" title="peacezx的博客" type="application/atom+xml">
   
@@ -94,58 +94,97 @@
 
   <div id="main-wrap" class="position-relative" style="margin-top: 55px;">
       <div class="main-inner-content">
-          <style>
-    .content-box {
-        min-height: 93vh;
-        padding: 15px;
-        background-color: rgba(255, 255, 255, .8);
+          <!--博文页面-->
+
+<style>
+    .header-box {
+        height: 370px;
+        filter: blur(10px);
+        background-size: cover;
+        background-color: lightsteelblue;
     }
 
-    .sns-container li a{
-        color: black;
+    .post-box {
+        padding: 15px;
+        padding-top: 60px;
+        min-height: 80vh;
+        margin-top: -200px;
+        border-radius: 4px;
+        background-color: rgba(255,255,255,.8);
+    }
+
+    .post-avatar {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+    }
+
+    .flow-chart {
+        text-align: center;
+    }
+
+    img[alt="post-cover"] {
+        display: none;
     }
 </style>
-
-<div class="container">
-    <div class="content-box full-width is-flex justify-center">
-        <div class="columns">
-            <div class="column is-5">
-                <img class="avatar" src="https://wx4.sinaimg.cn/mw1024/d22b15a0gy1fsrm9hyf18j23402bxqv6.jpg">
+<header>
+    <div id="header_box" class="header-box"></div>
+</header>
+<section>
+    <div class="container post-box">
+        <div class="content post-title is-flex center flex-column" style="margin-bottom: 70px; overflow: auto;">
+            <h1 class="has-text-centered" style="padding-bottom: 10px; border-bottom: 3px solid #fff">
+                <strong>nihao</strong>
+            </h1>
+            
+            <div class="is-flex align-center">
+                <img class="post-avatar" src="https://wx4.sinaimg.cn/mw1024/d22b15a0gy1fsrm9hyf18j23402bxqv6.jpg">
+                <span style="padding:0 10px;"> <span class="sub-title">By</span> Dake</span>
+                <span class="post-date sub-title">at: 2018-07-22</span>
             </div>
-            <div class="column">
-                <div class="content">
-                    <h1>
-                        About
-                        <br>
-                        <strong>Dake</strong>
-                    </h1>
-                    <p class="is-flex align-center"><i class="fa fa-location-arrow" style="margin-right: 5px;"></i> UK</p>
-                    <p><strong>E-mail:&nbsp;&nbsp;</strong>dakewin@outlook.com</p>
-                    <p>A Touch Of Zen</p>
-                    <p>热爱生活。</p></p>
-
-                </div>
+            
                 <div>
-                    <ul class="sns-container is-flex">
-                        
-
-                        
-
-                        
-
-                        
-
-                        
-
-                        
-
-                        
-                    </ul>
+                    
                 </div>
-            </div>
+            
+        </div>
+        <div class="content" style="overflow: auto">
+            
+        </div>
+        <div class="post-reply">
+            
+                <!-- 来必力City版安装代码 -->
+                <div id="lv-container" data-id="city" data-uid="MTAyMC8zNzE4My8xMzcxNw==">
+                    <script type="text/javascript">
+                        (function(d, s) {
+                            var j, e = d.getElementsByTagName(s)[0];
+
+                            if (typeof LivereTower === 'function') { return; }
+
+                            j = d.createElement(s);
+                            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                            j.async = true;
+
+                            e.parentNode.insertBefore(j, e);
+                        })(document, 'script');
+                    </script>
+                    <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+                </div>
+                <!-- City版安装代码已完成 -->
+            
+            
         </div>
     </div>
-</div>
+</section>
+<script>
+    // 获取第一张图, 用以当封面背景图
+    var img = document.querySelectorAll('img')[1]
+
+    if (img) {
+        var header_box = document.querySelector('#header_box')
+        header_box.style.backgroundImage = 'url('+ img.src +')'
+    }
+</script>
       </div>
   </div>
   <style>
