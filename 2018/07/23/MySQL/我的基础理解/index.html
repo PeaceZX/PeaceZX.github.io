@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html class="full-height">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="//cdn.bootcss.com/bulma/0.4.1/css/bulma.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  
+  <title>MySQL我的基础理解 | peacezx的博客-一个95后Python开发程序员</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="前两天入门了一下MySQL,毕竟市场上使用率最高的数据库。 我觉得吧，数据库就是一个存放和管理数据的仓库，就像商品被分类存放在不同的仓库一样，这里不过是把商品变成了数据。 主要流程就是：  建立数据库，A库，B库， C库等 建立库中的表，向EXCEL中的表一样，A库甲表，A库乙表，B库丙表 建立表的列，就是分类，例如：名字、ID、电话等 给列分配数据 操作表：读取，插入，删除等  这就是一个大概">
+<meta name="keywords" content="MySQL">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MySQL我的基础理解">
+<meta property="og:url" content="http://PeaceZX.github.io/2018/07/23/MySQL/我的基础理解/index.html">
+<meta property="og:site_name" content="peacezx的博客-一个95后Python开发程序员">
+<meta property="og:description" content="前两天入门了一下MySQL,毕竟市场上使用率最高的数据库。 我觉得吧，数据库就是一个存放和管理数据的仓库，就像商品被分类存放在不同的仓库一样，这里不过是把商品变成了数据。 主要流程就是：  建立数据库，A库，B库， C库等 建立库中的表，向EXCEL中的表一样，A库甲表，A库乙表，B库丙表 建立表的列，就是分类，例如：名字、ID、电话等 给列分配数据 操作表：读取，插入，删除等  这就是一个大概">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://i.loli.net/2018/07/25/5b5793e5cfecd.png">
+<meta property="og:updated_time" content="2018-07-24T22:22:49.636Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="MySQL我的基础理解">
+<meta name="twitter:description" content="前两天入门了一下MySQL,毕竟市场上使用率最高的数据库。 我觉得吧，数据库就是一个存放和管理数据的仓库，就像商品被分类存放在不同的仓库一样，这里不过是把商品变成了数据。 主要流程就是：  建立数据库，A库，B库， C库等 建立库中的表，向EXCEL中的表一样，A库甲表，A库乙表，B库丙表 建立表的列，就是分类，例如：名字、ID、电话等 给列分配数据 操作表：读取，插入，删除等  这就是一个大概">
+<meta name="twitter:image" content="https://i.loli.net/2018/07/25/5b5793e5cfecd.png">
+  
+    <link rel="alternate" href="/atom.xml" title="peacezx的博客-一个95后Python开发程序员" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/common.css">
+<link rel="stylesheet" href="/css/nav.css">
+<link rel="stylesheet" href="/css/layout.css">
+  
+
+</head>
+
+<body>
+  <header id="navbar" class="overflow-hidden">
+  <div class="container">
+    <nav class="nav">
+         <div class="nav-left">
+            <a href="/" class="nav-item" style="font-size: 20px;">
+              <span class="logo">Dake</span>'s Blog
+            </a>
+         </div>
+        <div class="nav-center is-hidden position-relative" id="search_container">
+            <div class="nav-item full-width full-height">
+                <i class="fa fa-search has-padding" aria-hidden="true"></i>
+                <input type="text" id="search_input" class="search-input full-height full-width" placeholder="Search post" autofocus>
+                <i id="close_search" class="fa fa-times" aria-hidden="true"></i>
+            </div>
+            <div id="search_result"></div>
+        </div>
+        <div class="nav-right nav-menu">
+            <a class="nav-item" id="search">
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </a>
+            
+            <a class="nav-item" href="/">
+                Home
+            </a>
+            
+            <a class="nav-item" href="/works">
+                My Works
+            </a>
+            
+            <a class="nav-item" href="/about">
+                About
+            </a>
+            
+        </div>
+        <span class="nav-toggle" id="navMenuDropdown">
+            <span></span>
+            <span></span>
+            <span></span>
+        </span>
+        <div class="navbar-menu position-absolute full-width content-box is-hidden-desktop is-flex flex-column center" style="top: 100%;">
+            
+            <a class="nav-item flex-1" href="/">
+                Home
+            </a>
+            
+            <a class="nav-item flex-1" href="/works">
+                My Works
+            </a>
+            
+            <a class="nav-item flex-1" href="/about">
+                About
+            </a>
+            
+        </div>
+    </nav>
+  </div>
+</header>
+
+  <div id="main-wrap" class="position-relative" style="margin-top: 55px;">
+      <div class="main-inner-content">
+          <!--博文页面-->
+
+<style>
+    .header-box {
+        height: 370px;
+        filter: blur(10px);
+        background-size: cover;
+        background-color: lightsteelblue;
+    }
+
+    .post-box {
+        padding: 15px;
+        padding-top: 60px;
+        min-height: 80vh;
+        margin-top: -200px;
+        border-radius: 4px;
+        background-color: rgba(255,255,255,.8);
+    }
+
+    .post-avatar {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+    }
+
+    .flow-chart {
+        text-align: center;
+    }
+
+    img[alt="post-cover"] {
+        display: none;
+    }
+</style>
+<header>
+    <div id="header_box" class="header-box"></div>
+</header>
+<section>
+    <div class="container post-box">
+        <div class="content post-title is-flex center flex-column" style="margin-bottom: 70px; overflow: auto;">
+            <h1 class="has-text-centered" style="padding-bottom: 10px; border-bottom: 3px solid #fff">
+                <strong>MySQL我的基础理解</strong>
+            </h1>
+            
+            <div class="is-flex align-center">
+                <img class="post-avatar" src="http://wx2.sinaimg.cn/mw690/d22b15a0ly8flw6ma0bknj20q60qpadi.jpg">
+                <span style="padding:0 10px;"> <span class="sub-title">By</span> Dake</span>
+                <span class="post-date sub-title">at: 2018-07-23</span>
+            </div>
+            
+                <div>
+                    
+                         <a class="tag is-post-tag" href="/tags/MySQL/">MySQL</a>
+                    
+                </div>
+            
+        </div>
+        <div class="content" style="overflow: auto">
+            <p><a href="https://i.loli.net/2018/07/25/5b5793e5cfecd.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2018/07/25/5b5793e5cfecd.png" alt="MySQL-logo-F6FF285A58-seeklogo.com.png"></a></p>
+<p>前两天入门了一下MySQL,毕竟市场上使用率最高的数据库。</p>
+<p>我觉得吧，数据库就是一个存放和管理数据的仓库，就像商品被分类存放在不同的仓库一样，这里不过是把商品变成了数据。</p>
+<p>主要流程就是：</p>
+<ol>
+<li>建立数据库，A库，B库， C库等</li>
+<li>建立库中的表，向EXCEL中的表一样，A库甲表，A库乙表，B库丙表</li>
+<li>建立表的列，就是分类，例如：名字、ID、电话等</li>
+<li>给列分配数据</li>
+<li>操作表：读取，插入，删除等</li>
+</ol>
+<p>这就是一个大概的操作流程，我觉得只要多用，具体的参数都是可以熟悉的。</p>
+<p>至于更深层次的学习挖掘，日后吧。</p>
+
+        </div>
+        <div class="post-reply">
+            
+                <!-- 来必力City版安装代码 -->
+                <div id="lv-container" data-id="city" data-uid="MTAyMC8zNzE4My8xMzcxNw==">
+                    <script type="text/javascript">
+                        (function(d, s) {
+                            var j, e = d.getElementsByTagName(s)[0];
+
+                            if (typeof LivereTower === 'function') { return; }
+
+                            j = d.createElement(s);
+                            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                            j.async = true;
+
+                            e.parentNode.insertBefore(j, e);
+                        })(document, 'script');
+                    </script>
+                    <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+                </div>
+                <!-- City版安装代码已完成 -->
+            
+            
+            <div id="disqus_thread" style="width: 80%; margin: 0 auto;"></div>
+                <script>
+
+                    /**
+                     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+                    /*
+                     var disqus_config = function () {
+                     this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                     this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                     };
+                     */
+                    (function() { // DON'T EDIT BELOW THIS LINE
+                        var d = document, s = d.createElement('script');
+                        s.src = 'https://haojen.disqus.com/embed.js';
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            
+        </div>
+    </div>
+</section>
+<script>
+    // 获取第一张图, 用以当封面背景图
+    var img = document.querySelectorAll('img')[1]
+
+    if (img) {
+        var header_box = document.querySelector('#header_box')
+        header_box.style.backgroundImage = 'url('+ img.src +')'
+    }
+</script>
+      </div>
+  </div>
+  <style>
+  #footer {
+    min-height: 10vh;
+    background: black;
+    color: #fff;
+  }
+
+  #footer a {
+    color: #e1e1e1;
+  }
+</style>
+<footer id="footer" class="has-text-centered is-flex center">
+  <div class="container has-padding">
+    <div>
+      <div>
+        
+        This is my house
+        <br>
+        Copyright © dake song 2018
+        <br>
+        宋大克的博客-95后Python开发工程师 
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/search_core.js"></script>
+<script src="/js/script.js"></script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>

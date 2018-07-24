@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>peacezx的博客</title>
+  <title>peacezx的博客-一个95后Python开发程序员</title>
   
-  <subtitle>UOB, 华为-大数据开发</subtitle>
+  <subtitle>伯明翰大学, 华为-大数据云开发</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://PeaceZX.github.io/"/>
-  <updated>2018-07-22T19:59:16.310Z</updated>
+  <updated>2018-07-24T22:22:49.632Z</updated>
   <id>http://PeaceZX.github.io/</id>
   
   <author>
@@ -17,13 +17,105 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>python</title>
-    <link href="http://PeaceZX.github.io/2018/07/22/python/"/>
-    <id>http://PeaceZX.github.io/2018/07/22/python/</id>
-    <published>2018-07-22T11:41:14.000Z</published>
-    <updated>2018-07-22T19:59:16.310Z</updated>
+    <title>unity3D_Project</title>
+    <link href="http://PeaceZX.github.io/2018/07/24/unity3D-Project/unity3D-Project/"/>
+    <id>http://PeaceZX.github.io/2018/07/24/unity3D-Project/unity3D-Project/</id>
+    <published>2018-07-24T15:35:43.000Z</published>
+    <updated>2018-07-24T22:22:49.632Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="终于把个人博客做出来了"><a href="#终于把个人博客做出来了" class="headerlink" title="终于把个人博客做出来了"></a>终于把个人博客做出来了</h1><p><em>今天是22号周日</em></p><h2 id="感受"><a href="#感受" class="headerlink" title="感受"></a>感受</h2><p>–</p><p>我很<del>开心，激动</del>，咳咳，困~~~</p><p>以后我会间歇性把我的学习笔记和感悟post上来，作为个人学术积累。</p><p> 其实我。。。</p><p> 比较喜欢发微博，可以来我<a href="https://weibo.com/u/3526038944/home?wvr=5" target="_blank" rel="noopener">微博互动</a></p><p> 或者直接在本博客下面留言，欢迎探讨各类<del>学术知识</del>，生活分享，人生感悟。</p><p><img src="C:\Users\SongChengjun\PeaceZX.github.io\source\_image\TaskAssignment.jpg" alt=""></p>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://i.loli.net/2018/07/25/5b5795ffe540b.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2018/07/25/5b5795ffe540b.png" alt="adad.PNG"></a></p><h1 id="Terrian"><a href="#Terrian" class="headerlink" title="Terrian"></a>Terrian</h1><p>This is a VR project. So, building the virtual garden based on a 3D terrian is necessary. It looks like a flat plane after creating this gameObject. A terrian contains a lot of points, like hill, lakes, trees and grass. All the above should be carefully designed to make the terrian as real as possiable.</p><h1 id="River"><a href="#River" class="headerlink" title="River"></a>River</h1><p>After creating the terrian. Raising it up, then digging a hole to make a lake or river. The lower part of the terrian will be filled of water. import the standard asset, there is a gameObject called water can be used.</p><h1 id="The-texture"><a href="#The-texture" class="headerlink" title="The texture"></a>The texture</h1><p>Creating the walking lane to make sure the player in this game know which way should go.</p><p>#Flower and trees</p><p>I use several assets from the assesr store.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://i.loli.net/2018/07/25/5b5795ffe540b.png&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://i.loli.net/2018/07/25/5b5795ff
+      
+    
+    </summary>
+    
+    
+      <category term="Unity3D" scheme="http://PeaceZX.github.io/tags/Unity3D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Unity3D总结</title>
+    <link href="http://PeaceZX.github.io/2018/07/23/unity3D-Project/Unity3D_projectFlowchart/"/>
+    <id>http://PeaceZX.github.io/2018/07/23/unity3D-Project/Unity3D_projectFlowchart/</id>
+    <published>2018-07-23T10:01:18.815Z</published>
+    <updated>2018-07-24T22:22:49.638Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://i.loli.net/2018/07/25/5b5795ffe540b.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2018/07/25/5b5795ffe540b.png" alt="adad.PNG"></a></p><h1 id="什么是Unity3D"><a href="#什么是Unity3D" class="headerlink" title="什么是Unity3D"></a>什么是Unity3D<img class="github-emoji" title="relaxed" alt="relaxed" src="https://assets-cdn.github.com/images/icons/emoji/unicode/263a.png?v8" height="20" width="20"></h1><p>强大的游戏开发引擎，基于此，游戏的开发将变得异常简单。</p><h1 id="开发脚本-CSharp"><a href="#开发脚本-CSharp" class="headerlink" title="开发脚本 CSharp"></a>开发脚本 CSharp</h1><p>JavaScript和C#是主要的脚本语言</p><h1 id="我的项目步骤"><a href="#我的项目步骤" class="headerlink" title="我的项目步骤"></a>我的项目步骤</h1><ol><li>建立地形，因为我是VR游戏开发，所以使用3D地形。</li><li>在地形上建立山脉，湖泊和植被</li><li>根据需要在Asset Store下载需要的的Asset。</li><li>布置场景</li><li>编程：这一步主要是碰撞触发事件</li><li>选择Player设置为Openvr</li><li>Built到window平台</li></ol><p><img class="github-emoji" title="sparkles" alt="sparkles" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2728.png?v8" height="20" width="20"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://i.loli.net/2018/07/25/5b5795ffe540b.png&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://i.loli.net/2018/07/25/5b5795ff
+      
+    
+    </summary>
+    
+    
+      <category term="Unity3D" scheme="http://PeaceZX.github.io/tags/Unity3D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MySQL我的基础理解</title>
+    <link href="http://PeaceZX.github.io/2018/07/23/MySQL/%E6%88%91%E7%9A%84%E5%9F%BA%E7%A1%80%E7%90%86%E8%A7%A3/"/>
+    <id>http://PeaceZX.github.io/2018/07/23/MySQL/我的基础理解/</id>
+    <published>2018-07-23T09:51:39.000Z</published>
+    <updated>2018-07-24T22:22:49.636Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://i.loli.net/2018/07/25/5b5793e5cfecd.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2018/07/25/5b5793e5cfecd.png" alt="MySQL-logo-F6FF285A58-seeklogo.com.png"></a></p><p>前两天入门了一下MySQL,毕竟市场上使用率最高的数据库。</p><p>我觉得吧，数据库就是一个存放和管理数据的仓库，就像商品被分类存放在不同的仓库一样，这里不过是把商品变成了数据。</p><p>主要流程就是：</p><ol><li>建立数据库，A库，B库， C库等</li><li>建立库中的表，向EXCEL中的表一样，A库甲表，A库乙表，B库丙表</li><li>建立表的列，就是分类，例如：名字、ID、电话等</li><li>给列分配数据</li><li>操作表：读取，插入，删除等</li></ol><p>这就是一个大概的操作流程，我觉得只要多用，具体的参数都是可以熟悉的。</p><p>至于更深层次的学习挖掘，日后吧。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://i.loli.net/2018/07/25/5b5793e5cfecd.png&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://i.loli.net/2018/07/25/5b5793e5
+      
+    
+    </summary>
+    
+    
+      <category term="MySQL" scheme="http://PeaceZX.github.io/tags/MySQL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>markdown</title>
+    <link href="http://PeaceZX.github.io/2018/07/22/markdown/markdown/"/>
+    <id>http://PeaceZX.github.io/2018/07/22/markdown/markdown/</id>
+    <published>2018-07-22T22:08:56.000Z</published>
+    <updated>2018-07-24T22:22:49.639Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://i.loli.net/2018/07/25/5b5796e43f2a9.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2018/07/25/5b5796e43f2a9.png" alt="dsfdfs.png"></a></p><h2 id="MarkDown语法中代码怎么换行？"><a href="#MarkDown语法中代码怎么换行？" class="headerlink" title="MarkDown语法中代码怎么换行？"></a>MarkDown语法中代码怎么换行？</h2><p><strong>问题：</strong></p><p>MarkDown语法中明明有代码标签但是为什么代码的展示这么弱？连换行都不行？</p><p>回复：</p><p>不是markdown的语法弱没有准备代码标签，也不是前台展示代码渲染框架没有为代码显示做准备，是我们自己不了解……<br>其实百度的时候会发现，几乎没有答案……（除了我在贴吧里面问了这么个问题以外^_^）<br>这种现象只能反应两种情况</p><p>大家都知道根本不需要问<br>是一个很前卫的话题，几乎没有人了解<br>很显然，对于MarkDown语法中代码怎么换行的问题，应该更靠近前者。<br>发现代码不会换行的同学不出意料的话， 应该都是这么写的</p><p><strong>在最一开始的三个点与上面的内容价格空格就行了</strong></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://i.loli.net/2018/07/25/5b5796e43f2a9.png&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://i.loli.net/2018/07/25/5b5796e4
+      
+    
+    </summary>
+    
+    
+      <category term="Markdown" scheme="http://PeaceZX.github.io/tags/Markdown/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>终于！把个人博客搭建起来了！</title>
+    <link href="http://PeaceZX.github.io/2018/07/22/%E7%BB%88%E4%BA%8E%EF%BC%81%E6%8A%8A%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%B5%B7%E6%9D%A5%E4%BA%86%EF%BC%81/%E7%BB%88%E4%BA%8E%EF%BC%81%E6%8A%8A%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%B5%B7%E6%9D%A5%E4%BA%86%EF%BC%81/"/>
+    <id>http://PeaceZX.github.io/2018/07/22/终于！把个人博客搭建起来了！/终于！把个人博客搭建起来了！/</id>
+    <published>2018-07-22T11:41:14.000Z</published>
+    <updated>2018-07-24T21:08:24.221Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="终于把个人博客做出来了"><a href="#终于把个人博客做出来了" class="headerlink" title="终于把个人博客做出来了"></a>终于把个人博客做出来了</h1><p><em>今天是22号周日</em></p><h2 id="感受"><a href="#感受" class="headerlink" title="感受"></a>感受</h2><p>–</p><p>我很<del>开心，激动</del>，咳咳，困~~~</p><p>以后我会间歇性把我的学习笔记和感悟post上来，作为个人学术积累。</p><p> 其实我。。。</p><p> 比较喜欢发微博，可以来我<a href="https://weibo.com/u/3526038944/home?wvr=5" target="_blank" rel="noopener">微博互动</a></p><p> 或者直接在本博客下面留言，欢迎探讨各类<del>学术知识</del>，生活分享，人生感悟。</p><p><a href="https://i.loli.net/2018/07/25/5b5795394484c.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2018/07/25/5b5795394484c.png" alt="Student-3-icon.png"></a></p>]]></content>
     
     <summary type="html">
     
@@ -39,16 +131,25 @@
   </entry>
   
   <entry>
-    <title>nihao</title>
-    <link href="http://PeaceZX.github.io/2018/07/22/nihao/"/>
-    <id>http://PeaceZX.github.io/2018/07/22/nihao/</id>
+    <title>Markdown语法总结</title>
+    <link href="http://PeaceZX.github.io/2018/07/22/markdown/Markdown%E8%AF%AD%E6%B3%95%E6%80%BB%E7%BB%93/"/>
+    <id>http://PeaceZX.github.io/2018/07/22/markdown/Markdown语法总结/</id>
     <published>2018-07-22T10:44:26.000Z</published>
-    <updated>2018-07-22T10:44:26.606Z</updated>
+    <updated>2018-07-24T22:22:49.642Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://i.loli.net/2018/07/25/5b5796e43f2a9.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2018/07/25/5b5796e43f2a9.png" alt="dsfdfs.png"></a></p><p><strong>Markdown</strong> 是搭建网站必须，所以才学习的。但是在学习和应用的同时，发现这个语法精简了工作，提高了效率。因为它<em>偏重内容而不是格式</em>。以往我们写一遍文章，需要花比较多的时间在格式的排版上，比如页边距，行距，字体等等，而在Markdown里，使用标准定义的语法，减去了这些排版步骤，让人们将精力更多的集中在内容梳理上。这个语法规则大受欢迎是不无道理的。</p><h1 id="一、标题"><a href="#一、标题" class="headerlink" title="一、标题"></a>一、标题</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 一级标题</span><br><span class="line">## 二级标题</span><br><span class="line">### 三级标题</span><br><span class="line">（以此类推）</span><br></pre></td></tr></table></figure><p>这里注意：<strong>一定要在#前加空格</strong></p><p>显示的效果为</p><h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h1 id="二、字体"><a href="#二、字体" class="headerlink" title="二、字体"></a>二、字体</h1><p><strong>加粗</strong></p><p>要加粗的文字左右分别用两个*号包起来</p><p><strong>斜体</strong></p><p>要倾斜的文字左右分别用一个*号包起来</p><p><strong>斜体加粗</strong></p><p>要倾斜和加粗的文字左右分别用三个*号包起来</p><p><strong>删除线</strong></p><p>要加删除线的文字左右分别用两个~~号包起来</p><p>示例：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">**这是加粗的文字**</span><br><span class="line">*这是倾斜的文字*`</span><br><span class="line">***这是斜体加粗的文字***</span><br><span class="line">~~这是加删除线的文字~~</span><br></pre></td></tr></table></figure><p>效果如下：<br><strong>这是加粗的文字</strong><br><em>这是倾斜的文字</em><br><strong><em>这是斜体加粗的文字</em></strong><br><del>这是加删除线的文字</del></p><h1 id="三、引用"><a href="#三、引用" class="headerlink" title="三、引用"></a>三、引用</h1><p>符号 &gt; 大于号<br>随便几个大于号都等同于引用，至少一个，多写无妨，看心情咯。</p><p>例子：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;引用一下看看</span><br></pre></td></tr></table></figure><p>显示：</p><blockquote><p>应用一下看看</p></blockquote><h1 id="四、分割线"><a href="#四、分割线" class="headerlink" title="四、分割线"></a>四、分割线</h1><p>需要三个以上的-或者*</p><hr><hr><h1 id="五、图片"><a href="#五、图片" class="headerlink" title="五、图片"></a>五、图片</h1><p>图片需要注意，本地的有点麻烦还得弄到GitHub库，所以选择一个合适的图床来的简单方便。<br>我用的是：<a href="https://sm.ms/" target="_blank" rel="noopener">SM.,MS</a><br>非常好用，上传图片后有直接的Markdown链接引用。</p><p>图片的格式为：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![图片名](图片地址)</span><br></pre></td></tr></table></figure><p><img src="https://i.loli.net/2018/07/23/5b54fc9f6d48a.jpg" alt="green.jpg"></p><p>这是图片不带链接的，带链接的跟上面引用网站的一样啦。</p><h1 id="六、列表"><a href="#六、列表" class="headerlink" title="六、列表"></a>六、列表</h1><p><strong>无序列表</strong></p><p>-+*三种其一都可以</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-内容</span><br><span class="line">+内容</span><br><span class="line">*内容</span><br></pre></td></tr></table></figure><p>-嗯嗯</p><p>+嗯嗯</p><p>*嗯嗯</p><p><strong> 有序列表</strong></p><p>···<br>1.内容<br>2.内容<br>3.内容<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">**列表嵌套**</span><br><span class="line"></span><br><span class="line">上级和下级之间敲三个空格</span><br></pre></td></tr></table></figure></p><p>-eee</p><ol><li>aaa</li><li>eee<br>···</li></ol><p>-eee</p><ol><li>f</li><li>f</li></ol><h1 id="七、表格"><a href="#七、表格" class="headerlink" title="七、表格"></a>七、表格</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">表头|表头|表头</span><br><span class="line">---|:--:|---:</span><br><span class="line">内容|内容|内容</span><br><span class="line">内容|内容|内容</span><br></pre></td></tr></table></figure><p>第二行分割表头和内容。</p><ul><li>有一个就行，为了对齐，多加了几个<br>文字默认居左<br>-两边加：表示文字居中<br>-右边加：表示文字居右<br>注：原生的语法两边都要用 | 包起来。此处省略</li></ul><table><thead><tr><th>list</th><th style="text-align:left">list</th><th>list:</th></tr></thead><tbody><tr><td>content</td><td style="text-align:left">content</td><td>content</td></tr></tbody></table><h1 id="八、代码"><a href="#八、代码" class="headerlink" title="八、代码"></a>八、代码</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">代码</span><br></pre></td></tr></table></figure><h1 id="九、流程图"><a href="#九、流程图" class="headerlink" title="九、流程图"></a>九、流程图</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">flow</span><br><span class="line">st=&gt;start: 开始</span><br><span class="line">op=&gt;operation: My Operation</span><br><span class="line">cond=&gt;condition: Yes or No?</span><br><span class="line">e=&gt;end</span><br><span class="line">st-&gt;op-&gt;cond</span><br><span class="line">cond(yes)-&gt;e</span><br><span class="line">cond(no)-&gt;op</span><br><span class="line">&amp;</span><br></pre></td></tr></table></figure><p>flow<br>st=&gt;start: 开始<br>op=&gt;operation: My Operation<br>cond=&gt;condition: Yes or No?<br>e=&gt;end<br>st-&gt;op-&gt;cond<br>cond(yes)-&gt;e<br>cond(no)-&gt;op<br>&amp;</p>]]></content>
     
     <summary type="html">
     
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://i.loli.net/2018/07/25/5b5796e43f2a9.png&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://i.loli.net/2018/07/25/5b5796e4
+      
+    
     </summary>
     
+    
+      <category term="Markdown" scheme="http://PeaceZX.github.io/tags/Markdown/"/>
     
   </entry>
   
