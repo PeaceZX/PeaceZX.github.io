@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://PeaceZX.github.io/"/>
-  <updated>2018-07-25T19:58:03.442Z</updated>
+  <updated>2018-08-04T00:16:02.189Z</updated>
   <id>http://PeaceZX.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ProjectSummary</title>
+    <link href="http://PeaceZX.github.io/2018/07/27/unity3D-Project/ProjectSummary/"/>
+    <id>http://PeaceZX.github.io/2018/07/27/unity3D-Project/ProjectSummary/</id>
+    <published>2018-07-26T23:31:23.000Z</published>
+    <updated>2018-08-04T00:16:02.189Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="specification"><a href="#specification" class="headerlink" title="specification"></a>specification</h1><p>People over 60 have high morbidity to get dementia. And with the age incresing, the morbility will be higer as well. Therefore, age is one of the most crucial point to determine the end user.</p><p>Additionaly, dementia is a hereditary disease, therefore, if people have someone with dementia in his family. the morbidity will be incresded too. These kind of people are also the end user.</p><h1 id="virtual-garden"><a href="#virtual-garden" class="headerlink" title="virtual garden"></a>virtual garden</h1><p>this virtual garden is designed to attract to end user. Considering the majority of end user are old adults. The theme of this design is real based on the literure review about general interest in section two.  </p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;specification&quot;&gt;&lt;a href=&quot;#specification&quot; class=&quot;headerlink&quot; title=&quot;specification&quot;&gt;&lt;/a&gt;specification&lt;/h1&gt;&lt;p&gt;People over 60 have high m
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>git</title>
