@@ -2,6 +2,15 @@
 
 
 
+
+
+
+
+
+
+
+
+
   
 
 
@@ -9,8 +18,11 @@
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
 <meta name="theme-color" content="#222">
+
+
+
 
 
 
@@ -38,10 +50,6 @@
 
 
 
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
 
 
 
@@ -50,45 +58,25 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.4.0" rel="stylesheet" type="text/css" />
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.0">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.4.0">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.4.0">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="Hi,There" />
-
-
-
-
-
-  <link rel="alternate" href="/atom.xml" title="peacezx的博客-一个95后后端开发程序员" type="application/atom+xml" />
+  <link rel="mask-icon" href="/images/logo.svg?v=6.4.0" color="#222">
 
 
 
 
 
 
-<meta name="keywords" content="C Python MATLAB Unity3D">
-<meta property="og:type" content="website">
-<meta property="og:title" content="peacezx的博客-一个95后后端开发程序员">
-<meta property="og:url" content="http://PeaceZX.github.io/index.html">
-<meta property="og:site_name" content="peacezx的博客-一个95后后端开发程序员">
-<meta property="og:locale" content="zh-Hans">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="peacezx的博客-一个95后后端开发程序员">
 
 
 
@@ -97,15 +85,13 @@
   var CONFIG = {
     root: '/',
     scheme: 'Muse',
-    version: '5.1.4',
+    version: '6.4.0',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -117,12 +103,36 @@
 </script>
 
 
+  
+
+
+
+
+  <meta name="keywords" content="C Python MATLAB Unity3D">
+<meta property="og:type" content="website">
+<meta property="og:title" content="peacezx的博客-一个95后后端开发程序员">
+<meta property="og:url" content="http://PeaceZX.github.io/index.html">
+<meta property="og:site_name" content="peacezx的博客-一个95后后端开发程序员">
+<meta property="og:locale" content="zh-Hans">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="peacezx的博客-一个95后后端开发程序员">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="peacezx的博客-一个95后后端开发程序员" type="application/atom+xml" />
+
+
+
 
   <link rel="canonical" href="http://PeaceZX.github.io/"/>
 
 
 
-
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
 
   <title>peacezx的博客-一个95后后端开发程序员</title>
   
@@ -133,6 +143,34 @@
 
 
 
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
 
 </head>
 
@@ -153,26 +191,28 @@
     
       <div class="site-meta-headline">
         <a>
-          <img class="custom-logo-image" src="http://wx2.sinaimg.cn/mw690/d22b15a0ly8flw6ma0bknj20q60qpadi.jpg"
+          <img class="custom-logo-image" src="ttp://wx2.sinaimg.cn/mw690/d22b15a0ly8flw6ma0bknj20q60qpadi.jpg"
                alt="peacezx的博客-一个95后后端开发程序员"/>
         </a>
       </div>
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">peacezx的博客-一个95后后端开发程序员</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
+    
       
         <p class="site-subtitle">伯明翰大学, 华为-大数据云开发</p>
       
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="Toggle navigation bar">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -180,55 +220,53 @@
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
+          
+          <li class="menu-item menu-item-home menu-item-active">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Startseite</a>
+  </li>
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />Über</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />Tags</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Archiv</a>
+  </li>
 
       
+      
     </ul>
+  
+
+  
+    
+
   
 
   
@@ -236,12 +274,20 @@
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
@@ -252,6 +298,8 @@
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -278,25 +326,52 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/08/12/performance/" itemprop="url">How to increase Python performance</a></h1>
+                <a class="post-title-link" href="/2018/08/12/performance/" itemprop="url">
+                  How to increase Python performance
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-12T10:29:28+01:00">
-                2018-08-12
-              </time>
+
+              
+                
+              
+
+              <time title="Post created: 2018-08-12 10:29:28" itemprop="dateCreated datePublished" datetime="2018-08-12T10:29:28+01:00">2018-08-12</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Updated at: 2018-08-13 11:33:09" itemprop="dateModified" datetime="2018-08-13T11:33:09+01:00">2018-08-13</time>
+              
             
           </span>
 
@@ -365,6 +440,9 @@
         
       
     </div>
+
+    
+
     
     
     
@@ -403,6 +481,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -427,25 +507,52 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/08/10/python-Sqlite3-Opencv/" itemprop="url">python+Sqlite3+Opencv自动化测试（STB本地服务器_页面抓取_图片对比）</a></h1>
+                <a class="post-title-link" href="/2018/08/10/python-Sqlite3-Opencv/" itemprop="url">
+                  python+Sqlite3+Opencv自动化测试（STB本地服务器_页面抓取_图片对比）
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-10T11:18:55+01:00">
-                2018-08-10
-              </time>
+
+              
+                
+              
+
+              <time title="Post created: 2018-08-10 11:18:55" itemprop="dateCreated datePublished" datetime="2018-08-10T11:18:55+01:00">2018-08-10</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Updated at: 2018-08-13 11:33:11" itemprop="dateModified" datetime="2018-08-13T11:33:11+01:00">2018-08-13</time>
+              
             
           </span>
 
@@ -511,6 +618,9 @@
         
       
     </div>
+
+    
+
     
     
     
@@ -549,6 +659,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -573,25 +685,52 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/07/27/unity3D-Project/ProjectSummary/" itemprop="url">ProjectSummary</a></h1>
+                <a class="post-title-link" href="/2018/07/27/unity3D-Project/ProjectSummary/" itemprop="url">
+                  ProjectSummary
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-27T00:31:23+01:00">
-                2018-07-27
-              </time>
+
+              
+                
+              
+
+              <time title="Post created: 2018-07-27 00:31:23" itemprop="dateCreated datePublished" datetime="2018-07-27T00:31:23+01:00">2018-07-27</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Updated at: 2018-08-04 01:16:02" itemprop="dateModified" datetime="2018-08-04T01:16:02+01:00">2018-08-04</time>
+              
             
           </span>
 
@@ -633,6 +772,9 @@
         
       
     </div>
+
+    
+
     
     
     
@@ -671,6 +813,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -695,25 +839,40 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/07/25/git/git/" itemprop="url">git</a></h1>
+                <a class="post-title-link" href="/2018/07/25/git/git/" itemprop="url">
+                  git
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-25T20:40:43+01:00">
-                2018-07-25
-              </time>
+
+              
+                
+              
+
+              <time title="Post created: 2018-07-25 20:40:43 / Updated at: 20:58:03" itemprop="dateCreated datePublished" datetime="2018-07-25T20:40:43+01:00">2018-07-25</time>
             
 
             
+              
 
+              
             
           </span>
 
@@ -775,6 +934,9 @@
         
       
     </div>
+
+    
+
     
     
     
@@ -813,6 +975,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -837,25 +1001,52 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/07/24/unity3D-Project/unity3D-Project/" itemprop="url">unity3D_Project</a></h1>
+                <a class="post-title-link" href="/2018/07/24/unity3D-Project/unity3D-Project/" itemprop="url">
+                  unity3D_Project
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-24T16:35:43+01:00">
-                2018-07-24
-              </time>
+
+              
+                
+              
+
+              <time title="Post created: 2018-07-24 16:35:43" itemprop="dateCreated datePublished" datetime="2018-07-24T16:35:43+01:00">2018-07-24</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Updated at: 2018-07-25 21:03:21" itemprop="dateModified" datetime="2018-07-25T21:03:21+01:00">2018-07-25</time>
+              
             
           </span>
 
@@ -900,6 +1091,9 @@
         
       
     </div>
+
+    
+
     
     
     
@@ -938,6 +1132,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -962,25 +1158,52 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/07/23/unity3D-Project/Unity3D_projectFlowchart/" itemprop="url">Unity3D总结</a></h1>
+                <a class="post-title-link" href="/2018/07/23/unity3D-Project/Unity3D_projectFlowchart/" itemprop="url">
+                  Unity3D总结
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-23T11:01:18+01:00">
-                2018-07-23
-              </time>
+
+              
+                
+              
+
+              <time title="Post created: 2018-07-23 11:01:18" itemprop="dateCreated datePublished" datetime="2018-07-23T11:01:18+01:00">2018-07-23</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Updated at: 2018-07-25 21:02:21" itemprop="dateModified" datetime="2018-07-25T21:02:21+01:00">2018-07-25</time>
+              
             
           </span>
 
@@ -1032,6 +1255,9 @@
         
       
     </div>
+
+    
+
     
     
     
@@ -1070,6 +1296,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -1094,25 +1322,52 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/07/23/MySQL/我的基础理解/" itemprop="url">MySQL我的基础理解</a></h1>
+                <a class="post-title-link" href="/2018/07/23/MySQL/我的基础理解/" itemprop="url">
+                  MySQL我的基础理解
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-23T10:51:39+01:00">
-                2018-07-23
-              </time>
+
+              
+                
+              
+
+              <time title="Post created: 2018-07-23 10:51:39" itemprop="dateCreated datePublished" datetime="2018-07-23T10:51:39+01:00">2018-07-23</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Updated at: 2018-07-25 21:00:16" itemprop="dateModified" datetime="2018-07-25T21:00:16+01:00">2018-07-25</time>
+              
             
           </span>
 
@@ -1164,6 +1419,9 @@
         
       
     </div>
+
+    
+
     
     
     
@@ -1202,6 +1460,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -1226,25 +1486,52 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/07/22/markdown/markdown/" itemprop="url">markdown</a></h1>
+                <a class="post-title-link" href="/2018/07/22/markdown/markdown/" itemprop="url">
+                  markdown
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-22T23:08:56+01:00">
-                2018-07-22
-              </time>
+
+              
+                
+              
+
+              <time title="Post created: 2018-07-22 23:08:56" itemprop="dateCreated datePublished" datetime="2018-07-22T23:08:56+01:00">2018-07-22</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Updated at: 2018-07-24 23:22:49" itemprop="dateModified" datetime="2018-07-24T23:22:49+01:00">2018-07-24</time>
+              
             
           </span>
 
@@ -1290,6 +1577,9 @@
         
       
     </div>
+
+    
+
     
     
     
@@ -1328,6 +1618,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -1352,25 +1644,52 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/07/22/终于！把个人博客搭建起来了！/终于！把个人博客搭建起来了！/" itemprop="url">终于！把个人博客搭建起来了！</a></h1>
+                <a class="post-title-link" href="/2018/07/22/终于！把个人博客搭建起来了！/终于！把个人博客搭建起来了！/" itemprop="url">
+                  终于！把个人博客搭建起来了！
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-22T12:41:14+01:00">
-                2018-07-22
-              </time>
+
+              
+                
+              
+
+              <time title="Post created: 2018-07-22 12:41:14" itemprop="dateCreated datePublished" datetime="2018-07-22T12:41:14+01:00">2018-07-22</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Updated at: 2018-07-24 22:08:24" itemprop="dateModified" datetime="2018-07-24T22:08:24+01:00">2018-07-24</time>
+              
             
           </span>
 
@@ -1417,6 +1736,9 @@
         
       
     </div>
+
+    
+
     
     
     
@@ -1455,6 +1777,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -1479,25 +1803,52 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/07/22/markdown/Markdown语法总结/" itemprop="url">Markdown语法总结</a></h1>
+                <a class="post-title-link" href="/2018/07/22/markdown/Markdown语法总结/" itemprop="url">
+                  Markdown语法总结
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-22T11:44:26+01:00">
-                2018-07-22
-              </time>
+
+              
+                
+              
+
+              <time title="Post created: 2018-07-22 11:44:26" itemprop="dateCreated datePublished" datetime="2018-07-22T11:44:26+01:00">2018-07-22</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Updated at: 2018-07-24 23:22:49" itemprop="dateModified" datetime="2018-07-24T23:22:49+01:00">2018-07-24</time>
+              
             
           </span>
 
@@ -1609,6 +1960,9 @@
         
       
     </div>
+
+    
+
     
     
     
@@ -1647,9 +2001,6 @@
           </div>
           
 
-
-          
-
         </div>
         
           
@@ -1678,33 +2029,45 @@
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
+          
+            <nav class="site-state motion-element">
               
-                <a href="/archives/">
-              
-                  <span class="site-state-item-count">10</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
-              </div>
-            
-
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
+                <div class="site-state-item site-state-posts">
                 
-                  <span class="site-state-item-count">5</span>
-                  <span class="site-state-item-name">标签</span>
+                  <a href="/archives/">
                 
-              </div>
-            
+                    <span class="site-state-item-count">10</span>
+                    <span class="site-state-item-name">Artikel</span>
+                  </a>
+                </div>
+              
 
-          </nav>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">Tags</span>
+                  
+                </div>
+              
+            </nav>
+          
 
           
             <div class="feed-link motion-element">
@@ -1717,19 +2080,17 @@
 
           
             <div class="links-of-author motion-element">
-                
-                  <span class="links-of-author-item">
-                    <a href="https://github.com/peacezx" target="_blank" title="GitHub">
-                      
-                        <i class="fa fa-fw fa-github"></i>GitHub</a>
-                  </span>
-                
-                  <span class="links-of-author-item">
-                    <a href="mailto:dakewin@outlook.com" target="_blank" title="E-Mail">
-                      
-                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-                  </span>
-                
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/peacezx" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:dakewin@outlook.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  
+                </span>
+              
             </div>
           
 
@@ -1739,6 +2100,9 @@
           
           
 
+          
+            
+          
           
 
         </div>
@@ -1759,10 +2123,12 @@
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
+  <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">dake song</span>
+
+  
 
   
 </div>
@@ -1775,7 +2141,10 @@
 
 
 
+
+
         
+
 
 
 
@@ -1795,7 +2164,10 @@
     
 
     
+	
+    
 
+    
   </div>
 
   
@@ -1814,7 +2186,11 @@
 
 
 
-  
+
+
+
+
+
 
 
 
@@ -1834,16 +2210,6 @@
 
   
   
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
     <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
   
 
@@ -1852,18 +2218,13 @@
     <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
   
 
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
 
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=6.4.0"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=6.4.0"></script>
 
 
 
@@ -1875,21 +2236,7 @@
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.0"></script>
 
 
 
@@ -1897,11 +2244,7 @@
 
 
 
-
-
   
-
-
 
 
 
@@ -1925,6 +2268,12 @@
   
 
   
+
+  
+  
+
+  
+
   
 
   
