@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://PeaceZX.github.io/"/>
-  <updated>2018-08-04T00:16:02.189Z</updated>
+  <updated>2018-08-13T10:33:09.951Z</updated>
   <id>http://PeaceZX.github.io/</id>
   
   <author>
@@ -15,6 +15,54 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>How to increase Python performance</title>
+    <link href="http://PeaceZX.github.io/2018/08/12/performance/"/>
+    <id>http://PeaceZX.github.io/2018/08/12/performance/</id>
+    <published>2018-08-12T09:29:28.000Z</published>
+    <updated>2018-08-13T10:33:09.951Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong><em>python本身就跑不过C, 干不过C++，性能方面是个软肋。所以高效编程尤为重要。</em></strong></p><h1 id="1-import的使用"><a href="#1-import的使用" class="headerlink" title="1. import的使用"></a>1. import的使用</h1><p>在导入需要使用到的模块之前，一定要确定，要用到模块里的哪个函数。因为直接</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import os</span><br><span class="line">import numpy</span><br><span class="line">import matplotlib</span><br></pre></td></tr></table></figure><p>每次编译都会重复调用，大大降低系统速度。在确定了具体函数之后，我们可以<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">import matplotlib.pyplot as plt</span><br></pre></td></tr></table></figure></p><p>因为局部模块引用会<strong>提高运行速度</strong></p><p>。这样的模块使用还有另一个优点，就是<strong>增强了可阅读性。</strong></p><hr><h1 id="2-使用映射来替换条件搜索"><a href="#2-使用映射来替换条件搜索" class="headerlink" title="2. 使用映射来替换条件搜索"></a>2. 使用映射来替换条件搜索</h1><p>提到映射，python拥有dict等，dict就是字典，顾名思义，就是查找。也就是<strong>一一对应的关系</strong>。 在Python中没有select-case语句。dict的搜索条件比if快很多，所以<strong>当想用if的时候，尝试去使用dict吧</strong>。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#if search</span><br><span class="line">if a== 1:</span><br><span class="line">   b = 10</span><br><span class="line">else a == 2:</span><br><span class="line">   b = 20</span><br><span class="line"></span><br><span class="line">---</span><br><span class="line"></span><br><span class="line"># dict search: better performance</span><br><span class="line">d = &#123;1:10, 2:20, ...&#125;</span><br><span class="line">b = d[a]</span><br></pre></td></tr></table></figure><p>这里强调一下dict,使用的是大括号，而且内部元素是映射关系（一一对应）</p><h1 id="3-减少函数调用的数量"><a href="#3-减少函数调用的数量" class="headerlink" title="3. 减少函数调用的数量"></a>3. 减少函数调用的数量</h1><p>很多时候，我们需要去确认对象的类型，才能进行下一步操作。type()是常用的，如名字所示，检测类型。但是其实isinstance()最好，id()次之，type()最差</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#determine the variable type is integer</span><br><span class="line">type(a) == type(0) #call the function three times</span><br><span class="line">type(a) is type(0) #identity comparision</span><br><span class="line">isinstance(a,(int)) #call the function performance</span><br></pre></td></tr></table></figure><p>为了避免重复计算，避免把重复操作放到循环中</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#each loop needs to re-excute len(a)</span><br><span class="line">while i &lt; len(a):</span><br><span class="line">    statement</span><br><span class="line"></span><br><span class="line">#put len(a) outside loop</span><br><span class="line">m = len(a)</span><br><span class="line">while i &lt; m</span><br><span class="line">    statement</span><br></pre></td></tr></table></figure><p>当使用模块中的函数或者对象时，from x import y比较好而不是直接import x.<br>可以减少一次查询，解析器不需要先找到模块x,然后在模块的字典中找y</p><h1 id="4-使用局部变量"><a href="#4-使用局部变量" class="headerlink" title="4. 使用局部变量"></a>4. 使用局部变量</h1><p>局部变量易于维护，并且节约性能提高成本。因此尽量避免全局变量。</p><p>在模块命名空间中，将变量替换为局部变量是很有利的。比如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls = os.linesep</span><br></pre></td></tr></table></figure></p><p>两个好处</p><ol><li>提高程序性能，因为局部变量搜索速度快</li><li>使用短标识替换长模块变量，提高阅读性</li></ol><h1 id="5-直接迭代序列元素"><a href="#5-直接迭代序列元素" class="headerlink" title="5. 直接迭代序列元素"></a>5. 直接迭代序列元素</h1><p>对于序列（list, str, tuple等）。直接迭代序列元素</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = [1,2,3]</span><br><span class="line">for item in a</span><br><span class="line">   print(item)</span><br></pre></td></tr></table></figure><h1 id="6-用生成器表达式替换列表解析"><a href="#6-用生成器表达式替换列表解析" class="headerlink" title="6. 用生成器表达式替换列表解析"></a>6. 用生成器表达式替换列表解析</h1><p>列表解析生成整个列表，会对大量数据的迭代产生负面作用。<br>而生成器表达式则不会，生成器表达式不会创建一个列表，相反返回一个生成器，在需要的时候生成具体数值（延迟的），<strong>这种方式对内存友好</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#calculate the number of none-null characters in file f</span><br><span class="line">#list analysis</span><br><span class="line">l = sum([len(word) for line in f for word in line.split()])</span><br><span class="line">#generator expression</span><br><span class="line">l = sum(len(word) for line in f for word in line.split())</span><br></pre></td></tr></table></figure><h1 id="7-先编译后调用"><a href="#7-先编译后调用" class="headerlink" title="7.先编译后调用"></a>7.先编译后调用</h1><p>当使用函数eval()和exec()来执行代码时，最好调用代码对象（通过compile（）预先编译成字节码）而不是直接调用str,这样可以避免重复编译过程多次和提高程序性能。</p><p>正则表达式模式匹配是类似的，在执行比较和匹配前，最好将正则匹配表达式模式编译为正则表达式对象。（通过re.compile()函数）</p><h1 id="8-模块编程"><a href="#8-模块编程" class="headerlink" title="8.模块编程"></a>8.模块编程</h1><p>模块中最高级别的Python语句(无缩进代码)将再导入模块时执行，这里有个问题，是否所有代码都需要执行? 我们需要将模块的所有功能代码放入函数中(与主程序相关的功能代码也可以放在main()函数中，主程序本身调用main()函数)</p><p>测试代码可以写在模块的main()函数中，将在主程序中检测 <strong>name</strong> 的值，如果是<strong>main</strong>(表示模块直接执行)，则调用main()函数进行测试，如果它是模块的名称，表示模块被调用，则不会执行测试。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;strong&gt;&lt;em&gt;python本身就跑不过C, 干不过C++，性能方面是个软肋。所以高效编程尤为重要。&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h1 id=&quot;1-import的使用&quot;&gt;&lt;a href=&quot;#1-import的使用&quot; class=&quot;headerlink&quot; t
+      
+    
+    </summary>
+    
+    
+      <category term="python" scheme="http://PeaceZX.github.io/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python+Sqlite3+Opencv自动化测试（STB本地服务器_页面抓取_图片对比）</title>
+    <link href="http://PeaceZX.github.io/2018/08/10/python-Sqlite3-Opencv/"/>
+    <id>http://PeaceZX.github.io/2018/08/10/python-Sqlite3-Opencv/</id>
+    <published>2018-08-10T10:18:55.000Z</published>
+    <updated>2018-08-13T10:33:11.472Z</updated>
+    
+    <content type="html"><![CDATA[<p>STB服务器搭建起来后，需要检测显示的内容与期望匹配。这里就需要一个自动化测试工具。</p><p><strong>Python</strong> 作为编程脚本语言，因为其中含有大量的库可以引用，会大大加快开发效率。其中的webdriver, PIL, tkinter等库将发挥巨大的作用。</p><p>在图片对比方面，使用 <strong>opencv</strong> ，因为其适用于各大主流平台，具有强移植性。</p><p>数据库本来想用MySQL, 后来发现python有自带的 <strong>SQlite3</strong> 数据库，这是一个轻量级数据库，适合处理数据量不是很大的项目，加上python有内置module,因此使用起来非常方便。以上就是这个项目的主要架构。</p><hr><h1 id="Specification"><a href="#Specification" class="headerlink" title="Specification"></a>Specification</h1><p>搭建一个UI界面，将接口展示出来，方便用户进行自主配置。<br>python有三个主流UI设计Module，这里我选择tkinter, 因为以前用过，写过一个计算器，哈哈哈。Python的UI设计确实方便，但是局限性也很明显，不那么灵活，不过对于自主测试，清楚易于使用就可以啦。</p><p><strong>关于UI界面，留了两个接口：</strong></p><ol><li>想要测试的网址的URL输入</li><li>数据库里内置的tag选择（就是想要测试页面的预制图片）</li></ol><p><strong>关于数据库</strong><br>SQlite3是python内置轻量型数据库，非常适合中小型项目数据操作。其也是使用标准的SQL语句。（幸好，之前有接触过MySQL，所以上手没那么难）</p><ol><li>建立img_set表</li><li>表中有三个组（ID, TAG, PATH）ID对应预制图片编号，TAG对应预制图片网址，PATH对应预制图片本地路径。</li></ol><p><strong>关于图片对比</strong><br>图片咋对比，首先要分析图片包含的因素，有：颜色，文理，框架，密度等。相对于这些因素，我选择了直方图计算法，来计算两个图片的密度差值。越小越相似。但是对于浏览器检测，需要精密测试，甚至字符，这种基于颜色密度的方法作罢。选择opencv的哈希算法。</p><p><strong>关于python</strong><br>这一点写在最后，因为能分析的点太多了。从python脚本直接执行shell命令，进行screencap,保存到本地，名字的定义。我采用了模块化设计的方法。定义了相关函数，在UI界面交互的时候，就会触发这些函数，进行测试。<br>python太强大，但是往往会忽略底层的东西。而这些恰恰是高精尖人才的必修。</p><h1 id="python中需要注意的点"><a href="#python中需要注意的点" class="headerlink" title="python中需要注意的点"></a>python中需要注意的点</h1><p>在将本地路径导入数据库的时候，老是报错。具体错误（不识别|），或者其他的错误。加了r之后仍然报错。这是什么原因呢？经查证，需要在路径前后都加上“\”。原因后补？</p><p>还又就是tuple转list的问题，</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[(&quot;http://baidu.com&quot;)]</span><br></pre></td></tr></table></figure><p>slect数据库之后显示的是上述输出<br>而我们需要</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;http://baidu.com&quot;</span><br></pre></td></tr></table></figure><p>也就是不需要小括号和中括号，我用了type去测试地址类型，都显示为list，其实关于类型测试，<strong><em>isinstance比type好用。</em></strong> 这个就用到了如下方法：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">pathset = []</span><br><span class="line">for row in path:</span><br><span class="line">   finalpath = &apos;&apos;.join(row)</span><br><span class="line">   pathset.append(finalpath)</span><br><span class="line">print(pathset)</span><br></pre></td></tr></table></figure><p>这是一个非常巧妙的方法，用到了join，将list中每个元素都单独取出来，并且用空连接。最重要的有一点是，我提前定义了一个空list，将每次取出来的值以此放到空list里，这样就会出现想要的结果。</p><p><strong><em>在整体开发过程中真的遇到相当多问题，比编程更重要的是学习力和适应力，此外还有承受力，加油吧少年！</em></strong></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;STB服务器搭建起来后，需要检测显示的内容与期望匹配。这里就需要一个自动化测试工具。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Python&lt;/strong&gt; 作为编程脚本语言，因为其中含有大量的库可以引用，会大大加快开发效率。其中的webdriver, PIL, tkinter等库将
+      
+    
+    </summary>
+    
+    
+      <category term="python" scheme="http://PeaceZX.github.io/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>ProjectSummary</title>

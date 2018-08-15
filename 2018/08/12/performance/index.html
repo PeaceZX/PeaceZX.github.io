@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="python," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="peacezx的博客-一个95后后端开发程序员" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="python本身就跑不过C, 干不过C++，性能方面是个软肋。所以高效编程尤为重要。 1. import的使用在导入需要使用到的模块之前，一定要确定，要用到模块里的哪个函数。因为直接 123import osimport numpyimport matplotlib 每次编译都会重复调用，大大降低系统速度。在确定了具体函数之后，我们可以12import numpy as npimport matp">
+<meta name="keywords" content="python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to increase Python performance">
+<meta property="og:url" content="http://PeaceZX.github.io/2018/08/12/performance/index.html">
+<meta property="og:site_name" content="peacezx的博客-一个95后后端开发程序员">
+<meta property="og:description" content="python本身就跑不过C, 干不过C++，性能方面是个软肋。所以高效编程尤为重要。 1. import的使用在导入需要使用到的模块之前，一定要确定，要用到模块里的哪个函数。因为直接 123import osimport numpyimport matplotlib 每次编译都会重复调用，大大降低系统速度。在确定了具体函数之后，我们可以12import numpy as npimport matp">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-08-13T10:33:09.951Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="How to increase Python performance">
+<meta name="twitter:description" content="python本身就跑不过C, 干不过C++，性能方面是个软肋。所以高效编程尤为重要。 1. import的使用在导入需要使用到的模块之前，一定要确定，要用到模块里的哪个函数。因为直接 123import osimport numpyimport matplotlib 每次编译都会重复调用，大大降低系统速度。在确定了具体函数之后，我们可以12import numpy as npimport matp">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://PeaceZX.github.io/2018/08/12/performance/"/>
+
+
+
+
+
+  <title>How to increase Python performance | peacezx的博客-一个95后后端开发程序员</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta custom-logo">
+    
+      <div class="site-meta-headline">
+        <a>
+          <img class="custom-logo-image" src="http://wx2.sinaimg.cn/mw690/d22b15a0ly8flw6ma0bknj20q60qpadi.jpg"
+               alt="peacezx的博客-一个95后后端开发程序员"/>
+        </a>
+      </div>
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">peacezx的博客-一个95后后端开发程序员</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">伯明翰大学, 华为-大数据云开发</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://PeaceZX.github.io/2018/08/12/performance/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="dake song">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="peacezx的博客-一个95后后端开发程序员">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">How to increase Python performance</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-12T10:29:28+01:00">
+                2018-08-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><strong><em>python本身就跑不过C, 干不过C++，性能方面是个软肋。所以高效编程尤为重要。</em></strong></p>
+<h1 id="1-import的使用"><a href="#1-import的使用" class="headerlink" title="1. import的使用"></a>1. import的使用</h1><p>在导入需要使用到的模块之前，一定要确定，要用到模块里的哪个函数。因为直接</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import os</span><br><span class="line">import numpy</span><br><span class="line">import matplotlib</span><br></pre></td></tr></table></figure>
+<p>每次编译都会重复调用，大大降低系统速度。在确定了具体函数之后，我们可以<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">import matplotlib.pyplot as plt</span><br></pre></td></tr></table></figure></p>
+<p>因为局部模块引用会<strong>提高运行速度</strong></p>
+<p>。这样的模块使用还有另一个优点，就是<strong>增强了可阅读性。</strong></p>
+<hr>
+<h1 id="2-使用映射来替换条件搜索"><a href="#2-使用映射来替换条件搜索" class="headerlink" title="2. 使用映射来替换条件搜索"></a>2. 使用映射来替换条件搜索</h1><p>提到映射，python拥有dict等，dict就是字典，顾名思义，就是查找。也就是<strong>一一对应的关系</strong>。 在Python中没有select-case语句。dict的搜索条件比if快很多，所以<strong>当想用if的时候，尝试去使用dict吧</strong>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#if search</span><br><span class="line">if a== 1:</span><br><span class="line">   b = 10</span><br><span class="line">else a == 2:</span><br><span class="line">   b = 20</span><br><span class="line"></span><br><span class="line">---</span><br><span class="line"></span><br><span class="line"># dict search: better performance</span><br><span class="line">d = &#123;1:10, 2:20, ...&#125;</span><br><span class="line">b = d[a]</span><br></pre></td></tr></table></figure>
+<p>这里强调一下dict,使用的是大括号，而且内部元素是映射关系（一一对应）</p>
+<h1 id="3-减少函数调用的数量"><a href="#3-减少函数调用的数量" class="headerlink" title="3. 减少函数调用的数量"></a>3. 减少函数调用的数量</h1><p>很多时候，我们需要去确认对象的类型，才能进行下一步操作。type()是常用的，如名字所示，检测类型。但是其实isinstance()最好，id()次之，type()最差</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#determine the variable type is integer</span><br><span class="line">type(a) == type(0) #call the function three times</span><br><span class="line">type(a) is type(0) #identity comparision</span><br><span class="line">isinstance(a,(int)) #call the function performance</span><br></pre></td></tr></table></figure>
+<p>为了避免重复计算，避免把重复操作放到循环中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#each loop needs to re-excute len(a)</span><br><span class="line">while i &lt; len(a):</span><br><span class="line">    statement</span><br><span class="line"></span><br><span class="line">#put len(a) outside loop</span><br><span class="line">m = len(a)</span><br><span class="line">while i &lt; m</span><br><span class="line">    statement</span><br></pre></td></tr></table></figure>
+<p>当使用模块中的函数或者对象时，from x import y比较好而不是直接import x.<br>可以减少一次查询，解析器不需要先找到模块x,然后在模块的字典中找y</p>
+<h1 id="4-使用局部变量"><a href="#4-使用局部变量" class="headerlink" title="4. 使用局部变量"></a>4. 使用局部变量</h1><p>局部变量易于维护，并且节约性能提高成本。因此尽量避免全局变量。</p>
+<p>在模块命名空间中，将变量替换为局部变量是很有利的。比如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls = os.linesep</span><br></pre></td></tr></table></figure></p>
+<p>两个好处</p>
+<ol>
+<li>提高程序性能，因为局部变量搜索速度快</li>
+<li>使用短标识替换长模块变量，提高阅读性</li>
+</ol>
+<h1 id="5-直接迭代序列元素"><a href="#5-直接迭代序列元素" class="headerlink" title="5. 直接迭代序列元素"></a>5. 直接迭代序列元素</h1><p>对于序列（list, str, tuple等）。直接迭代序列元素</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = [1,2,3]</span><br><span class="line">for item in a</span><br><span class="line">   print(item)</span><br></pre></td></tr></table></figure>
+<h1 id="6-用生成器表达式替换列表解析"><a href="#6-用生成器表达式替换列表解析" class="headerlink" title="6. 用生成器表达式替换列表解析"></a>6. 用生成器表达式替换列表解析</h1><p>列表解析生成整个列表，会对大量数据的迭代产生负面作用。<br>而生成器表达式则不会，生成器表达式不会创建一个列表，相反返回一个生成器，在需要的时候生成具体数值（延迟的），<strong>这种方式对内存友好</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#calculate the number of none-null characters in file f</span><br><span class="line">#list analysis</span><br><span class="line">l = sum([len(word) for line in f for word in line.split()])</span><br><span class="line">#generator expression</span><br><span class="line">l = sum(len(word) for line in f for word in line.split())</span><br></pre></td></tr></table></figure>
+<h1 id="7-先编译后调用"><a href="#7-先编译后调用" class="headerlink" title="7.先编译后调用"></a>7.先编译后调用</h1><p>当使用函数eval()和exec()来执行代码时，最好调用代码对象（通过compile（）预先编译成字节码）而不是直接调用str,这样可以避免重复编译过程多次和提高程序性能。</p>
+<p>正则表达式模式匹配是类似的，在执行比较和匹配前，最好将正则匹配表达式模式编译为正则表达式对象。（通过re.compile()函数）</p>
+<h1 id="8-模块编程"><a href="#8-模块编程" class="headerlink" title="8.模块编程"></a>8.模块编程</h1><p>模块中最高级别的Python语句(无缩进代码)将再导入模块时执行，这里有个问题，是否所有代码都需要执行? 我们需要将模块的所有功能代码放入函数中(与主程序相关的功能代码也可以放在main()函数中，主程序本身调用main()函数)</p>
+<p>测试代码可以写在模块的main()函数中，将在主程序中检测 <strong>name</strong> 的值，如果是<strong>main</strong>(表示模块直接执行)，则调用main()函数进行测试，如果它是模块的名称，表示模块被调用，则不会执行测试。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/python/" rel="tag"># python</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/08/10/python-Sqlite3-Opencv/" rel="next" title="python+Sqlite3+Opencv自动化测试（STB本地服务器_页面抓取_图片对比）">
+                <i class="fa fa-chevron-left"></i> python+Sqlite3+Opencv自动化测试（STB本地服务器_页面抓取_图片对比）
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zNzE4My8xMzcxNw=="></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">dake song</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/peacezx" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:dakewin@outlook.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-import的使用"><span class="nav-number">1.</span> <span class="nav-text">1. import的使用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-使用映射来替换条件搜索"><span class="nav-number">2.</span> <span class="nav-text">2. 使用映射来替换条件搜索</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-减少函数调用的数量"><span class="nav-number">3.</span> <span class="nav-text">3. 减少函数调用的数量</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-使用局部变量"><span class="nav-number">4.</span> <span class="nav-text">4. 使用局部变量</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-直接迭代序列元素"><span class="nav-number">5.</span> <span class="nav-text">5. 直接迭代序列元素</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-用生成器表达式替换列表解析"><span class="nav-number">6.</span> <span class="nav-text">6. 用生成器表达式替换列表解析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-先编译后调用"><span class="nav-number">7.</span> <span class="nav-text">7.先编译后调用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#8-模块编程"><span class="nav-number">8.</span> <span class="nav-text">8.模块编程</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">dake song</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
