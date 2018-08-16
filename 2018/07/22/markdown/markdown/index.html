@@ -29,6 +29,10 @@
 
 
 
+  
+  
+  <link rel="stylesheet" media="all" href="/lib/Han/dist/han.min.css?v=3.3">
+
 
 
 
@@ -196,7 +200,7 @@
     
       <div class="site-meta-headline">
         <a>
-          <img class="custom-logo-image" src="ttp://wx2.sinaimg.cn/mw690/d22b15a0ly8flw6ma0bknj20q60qpadi.jpg"
+          <img class="custom-logo-image" src="http://wx2.sinaimg.cn/mw690/d22b15a0ly8flw6ma0bknj20q60qpadi.jpg"
                alt="peacezx的博客-一个95后后端开发程序员"/>
         </a>
       </div>
@@ -237,7 +241,7 @@
           
           <li class="menu-item menu-item-home">
     <a href="/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Startseite</a>
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Home</a>
   </li>
         
         
@@ -245,7 +249,7 @@
           
           <li class="menu-item menu-item-about">
     <a href="/about/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />Über</a>
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />About</a>
   </li>
         
         
@@ -261,10 +265,18 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Archiv</a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Archives</a>
   </li>
 
       
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />Search</a>
+        </li>
       
     </ul>
   
@@ -274,6 +286,33 @@
 
   
 
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
   
 </nav>
 
@@ -317,7 +356,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="dake song">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://wx2.sinaimg.cn/mw690/d22b15a0ly8flw6ma0bknj20q60qpadi.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -347,14 +386,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
 
               
                 
               
 
-              <time title="Post created: 2018-07-22 23:08:56" itemprop="dateCreated datePublished" datetime="2018-07-22T23:08:56+01:00">2018-07-22</time>
+              <time title="Created: 2018-07-22 23:08:56" itemprop="dateCreated datePublished" datetime="2018-07-22T23:08:56+01:00">2018-07-22</time>
             
 
             
@@ -371,7 +410,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Updated at: 2018-07-24 23:22:49" itemprop="dateModified" datetime="2018-07-24T23:22:49+01:00">2018-07-24</time>
+                <time title="Modified: 2018-07-24 23:22:49" itemprop="dateModified" datetime="2018-07-24T23:22:49+01:00">2018-07-24</time>
               
             
           </span>
@@ -398,7 +437,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody">
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -424,8 +463,8 @@
     
       <div>
         <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
-    <img id="wechat_subscriber_qcode" src="/path/to/your/wechatqcode ex. /uploads/wechat-qcode.jpg" alt="dake song wechat" style="width: 200px; max-width: 100%;"/>
-    <div>ex. subscribe to my blog by scanning my public wechat account</div>
+    <img id="wechat_subscriber_qcode" src="https://i.loli.net/2018/08/16/5b759052baf41.jpg" alt="dake song wechat" style="width: 200px; max-width: 100%;"/>
+    <div>Subscribe to my blog by scanning my private wechat account!</div>
 </div>
 
       </div>
@@ -516,10 +555,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Inhaltsverzeichnis
+            Table of Contents
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Übersicht
+            Overview
           </li>
         </ul>
       
@@ -527,6 +566,10 @@
       <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="http://wx2.sinaimg.cn/mw690/d22b15a0ly8flw6ma0bknj20q60qpadi.jpg"
+                alt="dake song" />
             
               <p class="site-author-name" itemprop="name">dake song</p>
               <p class="site-description motion-element" itemprop="description"></p>
@@ -540,7 +583,7 @@
                   <a href="/archives/">
                 
                     <span class="site-state-item-count">10</span>
-                    <span class="site-state-item-name">Artikel</span>
+                    <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
               
@@ -565,7 +608,7 @@
                       
                     
                     <span class="site-state-item-count">5</span>
-                    <span class="site-state-item-name">Tags</span>
+                    <span class="site-state-item-name">tags</span>
                   
                 </div>
               
@@ -591,6 +634,11 @@
               
                 <span class="links-of-author-item">
                   <a href="mailto:dakewin@outlook.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://weibo.com/3526038944/profile?rightmod=1&wvr=6&mod=personinfo" target="_blank" title="Weibo"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
                   
                 </span>
               
@@ -792,6 +840,19 @@
   
 
 
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=6.4.0"></script>
 
 
 
