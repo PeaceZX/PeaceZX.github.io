@@ -236,7 +236,7 @@
           
           <li class="menu-item menu-item-home menu-item-active">
     <a href="/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Home</a>
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
   </li>
         
         
@@ -244,7 +244,7 @@
           
           <li class="menu-item menu-item-about">
     <a href="/about/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />About</a>
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
   </li>
         
         
@@ -252,7 +252,15 @@
           
           <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />Tags</a>
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
   </li>
         
         
@@ -260,7 +268,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Archives</a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
   </li>
 
       
@@ -270,7 +278,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />Search</a>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />搜索</a>
         </li>
       
     </ul>
@@ -284,26 +292,22 @@
   
     <div class="site-search">
       
-  
-  <div class="algolia-popup popup search-popup">
-    <div class="algolia-search">
-      <div class="algolia-search-input-icon">
-        <i class="fa fa-search"></i>
-      </div>
-      <div class="algolia-search-input" id="algolia-search-input"></div>
-    </div>
-
-    <div class="algolia-results">
-      <div id="algolia-stats"></div>
-      <div id="algolia-hits"></div>
-      <div id="algolia-pagination" class="algolia-pagination"></div>
-    </div>
-
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
     <span class="popup-btn-close">
       <i class="fa fa-times-circle"></i>
     </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
   </div>
-
+  <div id="local-search-result"></div>
+</div>
 
 
 
@@ -339,6 +343,157 @@
   
   
 
+
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://PeaceZX.github.io/2018/08/17/learning/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="宋大克的个人博客">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://wx2.sinaimg.cn/mw690/d22b15a0ly8flw6ma0bknj20q60qpadi.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="peacezx的博客-一个95后后端开发程序员">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/08/17/learning/" itemprop="url">
+                  learning
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建于：2018-08-17 11:45:07 / 更新于：23:12:11" itemprop="dateCreated datePublished" datetime="2018-08-17T11:45:07+08:00">2018-08-17</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+        <span id="busuanzi_container_page_pv">
+        本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+        </span>
+          
+            
+          
+
+          
+          
+
+          
+          
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><em>在这一篇中，记录的知识点会很杂,因为这是为了面试而搜索整理的，可以没事拿来读一读，或多或少都会有帮助。</em></p>
+<h1 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h1><h2 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h2><p>通常状况下，我们会有大量的数据需要存储，分析和处理。而当前市场上，动辄上百G的内容。对于如此大的数据，查找起来会非常的耗时耗资源，一般查找方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sslect * form table</span><br><span class="line">where name &lt; 30</span><br></pre></td></tr></table></figure>
+<p>用这种方法，需要将数据库中的数据整体过滤一遍，才能找到符合要求的对象。当对象上千万上亿的时候，很显然我们需要寻找更优的方法。那就是<strong>索引</strong>。</p>
+<p>索引是属于表中的列数据。是一种数据结构，我们通过查找索引来查找数据会大大提高效率。而在索引中有<strong>B-TREE, R-TREE, 哈希索引</strong>等方法，下面我一一介绍。</p>
+<h3 id="B-tree"><a href="#B-tree" class="headerlink" title="B-tree"></a>B-tree</h3><p>Balance tree，平衡树，不同于二叉树，而它又是基于二叉树发展而来。因为我们希望二叉树矮胖长，减少度。B的结点不限制于两个，可以有更多，而</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+
+
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -349,7 +504,7 @@
     <link itemprop="mainEntityOfPage" href="http://PeaceZX.github.io/2018/08/12/performance/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="dake song">
+      <meta itemprop="name" content="宋大克的个人博客">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="http://wx2.sinaimg.cn/mw690/d22b15a0ly8flw6ma0bknj20q60qpadi.jpg">
     </span>
@@ -385,14 +540,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">发表于</span>
               
 
               
                 
               
 
-              <time title="Created: 2018-08-12 10:29:28" itemprop="dateCreated datePublished" datetime="2018-08-12T10:29:28+01:00">2018-08-12</time>
+              <time title="创建于：2018-08-12 10:29:28" itemprop="dateCreated datePublished" datetime="2018-08-12T10:29:28+08:00">2018-08-12</time>
             
 
             
@@ -409,13 +564,15 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-08-13 11:33:09" itemprop="dateModified" datetime="2018-08-13T11:33:09+01:00">2018-08-13</time>
+                <time title="更新于：2018-08-13 18:33:09" itemprop="dateModified" datetime="2018-08-13T18:33:09+08:00">2018-08-13</time>
               
             
           </span>
 
           
-
+        <span id="busuanzi_container_page_pv">
+        本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+        </span>
           
             
           
@@ -424,7 +581,7 @@
           
 
           
-
+          
           
 
           
@@ -520,6 +677,8 @@
   
   
 
+
+
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -530,7 +689,7 @@
     <link itemprop="mainEntityOfPage" href="http://PeaceZX.github.io/2018/08/10/python-Sqlite3-Opencv/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="dake song">
+      <meta itemprop="name" content="宋大克的个人博客">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="http://wx2.sinaimg.cn/mw690/d22b15a0ly8flw6ma0bknj20q60qpadi.jpg">
     </span>
@@ -566,14 +725,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">发表于</span>
               
 
               
                 
               
 
-              <time title="Created: 2018-08-10 11:18:55" itemprop="dateCreated datePublished" datetime="2018-08-10T11:18:55+01:00">2018-08-10</time>
+              <time title="创建于：2018-08-10 11:18:55" itemprop="dateCreated datePublished" datetime="2018-08-10T11:18:55+08:00">2018-08-10</time>
             
 
             
@@ -590,13 +749,33 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-08-13 11:33:11" itemprop="dateModified" datetime="2018-08-13T11:33:11+01:00">2018-08-13</time>
+                <time title="更新于：2018-08-18 11:11:12" itemprop="dateModified" datetime="2018-08-18T11:11:12+08:00">2018-08-18</time>
               
             
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/啪啪啪/" itemprop="url" rel="index"><span itemprop="name">啪啪啪</span></a></span>
 
+                
+                
+              
+            </span>
+          
+        <span id="busuanzi_container_page_pv">
+        本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+        </span>
           
             
           
@@ -605,7 +784,7 @@
           
 
           
-
+          
           
 
           
@@ -698,6 +877,8 @@
   
   
 
+
+
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -708,7 +889,7 @@
     <link itemprop="mainEntityOfPage" href="http://PeaceZX.github.io/2018/07/27/unity3D-Project/ProjectSummary/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="dake song">
+      <meta itemprop="name" content="宋大克的个人博客">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="http://wx2.sinaimg.cn/mw690/d22b15a0ly8flw6ma0bknj20q60qpadi.jpg">
     </span>
@@ -744,14 +925,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">发表于</span>
               
 
               
                 
               
 
-              <time title="Created: 2018-07-27 00:31:23" itemprop="dateCreated datePublished" datetime="2018-07-27T00:31:23+01:00">2018-07-27</time>
+              <time title="创建于：2018-07-27 00:31:23" itemprop="dateCreated datePublished" datetime="2018-07-27T00:31:23+08:00">2018-07-27</time>
             
 
             
@@ -768,13 +949,15 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-08-04 01:16:02" itemprop="dateModified" datetime="2018-08-04T01:16:02+01:00">2018-08-04</time>
+                <time title="更新于：2018-08-04 08:16:02" itemprop="dateModified" datetime="2018-08-04T08:16:02+08:00">2018-08-04</time>
               
             
           </span>
 
           
-
+        <span id="busuanzi_container_page_pv">
+        本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+        </span>
           
             
           
@@ -783,7 +966,7 @@
           
 
           
-
+          
           
 
           
@@ -852,6 +1035,8 @@
   
   
 
+
+
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -862,7 +1047,7 @@
     <link itemprop="mainEntityOfPage" href="http://PeaceZX.github.io/2018/07/25/git/git/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="dake song">
+      <meta itemprop="name" content="宋大克的个人博客">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="http://wx2.sinaimg.cn/mw690/d22b15a0ly8flw6ma0bknj20q60qpadi.jpg">
     </span>
@@ -898,25 +1083,39 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">发表于</span>
               
 
               
                 
               
 
-              <time title="Created: 2018-07-25 20:40:43 / Modified: 20:58:03" itemprop="dateCreated datePublished" datetime="2018-07-25T20:40:43+01:00">2018-07-25</time>
+              <time title="创建于：2018-07-25 20:40:43" itemprop="dateCreated datePublished" datetime="2018-07-25T20:40:43+08:00">2018-07-25</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="更新于：2018-07-26 03:58:03" itemprop="dateModified" datetime="2018-07-26T03:58:03+08:00">2018-07-26</time>
               
             
           </span>
 
           
-
+        <span id="busuanzi_container_page_pv">
+        本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+        </span>
           
             
           
@@ -925,7 +1124,7 @@
           
 
           
-
+          
           
 
           
@@ -1014,6 +1213,8 @@
   
   
 
+
+
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -1024,7 +1225,7 @@
     <link itemprop="mainEntityOfPage" href="http://PeaceZX.github.io/2018/07/24/unity3D-Project/unity3D-Project/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="dake song">
+      <meta itemprop="name" content="宋大克的个人博客">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="http://wx2.sinaimg.cn/mw690/d22b15a0ly8flw6ma0bknj20q60qpadi.jpg">
     </span>
@@ -1060,14 +1261,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">发表于</span>
               
 
               
                 
               
 
-              <time title="Created: 2018-07-24 16:35:43" itemprop="dateCreated datePublished" datetime="2018-07-24T16:35:43+01:00">2018-07-24</time>
+              <time title="创建于：2018-07-24 16:35:43" itemprop="dateCreated datePublished" datetime="2018-07-24T16:35:43+08:00">2018-07-24</time>
             
 
             
@@ -1084,13 +1285,15 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-07-25 21:03:21" itemprop="dateModified" datetime="2018-07-25T21:03:21+01:00">2018-07-25</time>
+                <time title="更新于：2018-07-26 04:03:21" itemprop="dateModified" datetime="2018-07-26T04:03:21+08:00">2018-07-26</time>
               
             
           </span>
 
           
-
+        <span id="busuanzi_container_page_pv">
+        本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+        </span>
           
             
           
@@ -1099,7 +1302,7 @@
           
 
           
-
+          
           
 
           
@@ -1171,6 +1374,8 @@
   
   
 
+
+
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -1181,7 +1386,7 @@
     <link itemprop="mainEntityOfPage" href="http://PeaceZX.github.io/2018/07/23/unity3D-Project/Unity3D_projectFlowchart/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="dake song">
+      <meta itemprop="name" content="宋大克的个人博客">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="http://wx2.sinaimg.cn/mw690/d22b15a0ly8flw6ma0bknj20q60qpadi.jpg">
     </span>
@@ -1217,14 +1422,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">发表于</span>
               
 
               
                 
               
 
-              <time title="Created: 2018-07-23 11:01:18" itemprop="dateCreated datePublished" datetime="2018-07-23T11:01:18+01:00">2018-07-23</time>
+              <time title="创建于：2018-07-23 18:01:18" itemprop="dateCreated datePublished" datetime="2018-07-23T18:01:18+08:00">2018-07-23</time>
             
 
             
@@ -1241,13 +1446,15 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-07-25 21:02:21" itemprop="dateModified" datetime="2018-07-25T21:02:21+01:00">2018-07-25</time>
+                <time title="更新于：2018-07-26 04:02:21" itemprop="dateModified" datetime="2018-07-26T04:02:21+08:00">2018-07-26</time>
               
             
           </span>
 
           
-
+        <span id="busuanzi_container_page_pv">
+        本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+        </span>
           
             
           
@@ -1256,7 +1463,7 @@
           
 
           
-
+          
           
 
           
@@ -1335,6 +1542,8 @@
   
   
 
+
+
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -1345,7 +1554,7 @@
     <link itemprop="mainEntityOfPage" href="http://PeaceZX.github.io/2018/07/23/MySQL/我的基础理解/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="dake song">
+      <meta itemprop="name" content="宋大克的个人博客">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="http://wx2.sinaimg.cn/mw690/d22b15a0ly8flw6ma0bknj20q60qpadi.jpg">
     </span>
@@ -1381,14 +1590,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">发表于</span>
               
 
               
                 
               
 
-              <time title="Created: 2018-07-23 10:51:39" itemprop="dateCreated datePublished" datetime="2018-07-23T10:51:39+01:00">2018-07-23</time>
+              <time title="创建于：2018-07-23 10:51:39" itemprop="dateCreated datePublished" datetime="2018-07-23T10:51:39+08:00">2018-07-23</time>
             
 
             
@@ -1405,13 +1614,33 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-07-25 21:00:16" itemprop="dateModified" datetime="2018-07-25T21:00:16+01:00">2018-07-25</time>
+                <time title="更新于：2018-08-18 13:44:36" itemprop="dateModified" datetime="2018-08-18T13:44:36+08:00">2018-08-18</time>
               
             
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/技术/" itemprop="url" rel="index"><span itemprop="name">技术</span></a></span>
 
+                
+                
+              
+            </span>
+          
+        <span id="busuanzi_container_page_pv">
+        本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+        </span>
           
             
           
@@ -1420,7 +1649,7 @@
           
 
           
-
+          
           
 
           
@@ -1499,6 +1728,8 @@
   
   
 
+
+
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -1509,7 +1740,7 @@
     <link itemprop="mainEntityOfPage" href="http://PeaceZX.github.io/2018/07/22/markdown/markdown/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="dake song">
+      <meta itemprop="name" content="宋大克的个人博客">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="http://wx2.sinaimg.cn/mw690/d22b15a0ly8flw6ma0bknj20q60qpadi.jpg">
     </span>
@@ -1545,14 +1776,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">发表于</span>
               
 
               
                 
               
 
-              <time title="Created: 2018-07-22 23:08:56" itemprop="dateCreated datePublished" datetime="2018-07-22T23:08:56+01:00">2018-07-22</time>
+              <time title="创建于：2018-07-22 23:08:56" itemprop="dateCreated datePublished" datetime="2018-07-22T23:08:56+08:00">2018-07-22</time>
             
 
             
@@ -1569,13 +1800,15 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-07-24 23:22:49" itemprop="dateModified" datetime="2018-07-24T23:22:49+01:00">2018-07-24</time>
+                <time title="更新于：2018-07-25 06:22:49" itemprop="dateModified" datetime="2018-07-25T06:22:49+08:00">2018-07-25</time>
               
             
           </span>
 
           
-
+        <span id="busuanzi_container_page_pv">
+        本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+        </span>
           
             
           
@@ -1584,7 +1817,7 @@
           
 
           
-
+          
           
 
           
@@ -1657,6 +1890,8 @@
   
   
 
+
+
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -1667,7 +1902,7 @@
     <link itemprop="mainEntityOfPage" href="http://PeaceZX.github.io/2018/07/22/终于！把个人博客搭建起来了！/终于！把个人博客搭建起来了！/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="dake song">
+      <meta itemprop="name" content="宋大克的个人博客">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="http://wx2.sinaimg.cn/mw690/d22b15a0ly8flw6ma0bknj20q60qpadi.jpg">
     </span>
@@ -1703,14 +1938,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">发表于</span>
               
 
               
                 
               
 
-              <time title="Created: 2018-07-22 12:41:14" itemprop="dateCreated datePublished" datetime="2018-07-22T12:41:14+01:00">2018-07-22</time>
+              <time title="创建于：2018-07-22 12:41:14" itemprop="dateCreated datePublished" datetime="2018-07-22T12:41:14+08:00">2018-07-22</time>
             
 
             
@@ -1727,13 +1962,15 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-07-24 22:08:24" itemprop="dateModified" datetime="2018-07-24T22:08:24+01:00">2018-07-24</time>
+                <time title="更新于：2018-07-25 05:08:24" itemprop="dateModified" datetime="2018-07-25T05:08:24+08:00">2018-07-25</time>
               
             
           </span>
 
           
-
+        <span id="busuanzi_container_page_pv">
+        本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+        </span>
           
             
           
@@ -1742,7 +1979,7 @@
           
 
           
-
+          
           
 
           
@@ -1808,233 +2045,13 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://PeaceZX.github.io/2018/07/22/markdown/Markdown语法总结/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="dake song">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://wx2.sinaimg.cn/mw690/d22b15a0ly8flw6ma0bknj20q60qpadi.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="peacezx的博客-一个95后后端开发程序员">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/07/22/markdown/Markdown语法总结/" itemprop="url">
-                  Markdown语法总结
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-07-22 11:44:26" itemprop="dateCreated datePublished" datetime="2018-07-22T11:44:26+01:00">2018-07-22</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2018-07-24 23:22:49" itemprop="dateModified" datetime="2018-07-24T23:22:49+01:00">2018-07-24</time>
-              
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body han-init-context" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><a href="https://i.loli.net/2018/07/25/5b5796e43f2a9.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2018/07/25/5b5796e43f2a9.png" alt="dsfdfs.png"></a></p>
-<p><strong>Markdown</strong> 是搭建网站必须，所以才学习的。但是在学习和应用的同时，发现这个语法精简了工作，提高了效率。因为它<em>偏重内容而不是格式</em>。以往我们写一遍文章，需要花比较多的时间在格式的排版上，比如页边距，行距，字体等等，而在Markdown里，使用标准定义的语法，减去了这些排版步骤，让人们将精力更多的集中在内容梳理上。这个语法规则大受欢迎是不无道理的。</p>
-<h1 id="一、标题"><a href="#一、标题" class="headerlink" title="一、标题"></a>一、标题</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 一级标题</span><br><span class="line">## 二级标题</span><br><span class="line">### 三级标题</span><br><span class="line">（以此类推）</span><br></pre></td></tr></table></figure>
-<p>这里注意：<strong>一定要在#前加空格</strong></p>
-<p>显示的效果为</p>
-<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h1 id="二、字体"><a href="#二、字体" class="headerlink" title="二、字体"></a>二、字体</h1><p><strong>加粗</strong></p>
-<p>要加粗的文字左右分别用两个*号包起来</p>
-<p><strong>斜体</strong></p>
-<p>要倾斜的文字左右分别用一个*号包起来</p>
-<p><strong>斜体加粗</strong></p>
-<p>要倾斜和加粗的文字左右分别用三个*号包起来</p>
-<p><strong>删除线</strong></p>
-<p>要加删除线的文字左右分别用两个~~号包起来</p>
-<p>示例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">**这是加粗的文字**</span><br><span class="line">*这是倾斜的文字*`</span><br><span class="line">***这是斜体加粗的文字***</span><br><span class="line">~~这是加删除线的文字~~</span><br></pre></td></tr></table></figure>
-<p>效果如下：<br><strong>这是加粗的文字</strong><br><em>这是倾斜的文字</em><br><strong><em>这是斜体加粗的文字</em></strong><br><del>这是加删除线的文字</del></p>
-<h1 id="三、引用"><a href="#三、引用" class="headerlink" title="三、引用"></a>三、引用</h1><p>符号 &gt; 大于号<br>随便几个大于号都等同于引用，至少一个，多写无妨，看心情咯。</p>
-<p>例子：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;引用一下看看</span><br></pre></td></tr></table></figure>
-<p>显示：</p>
-<blockquote>
-<p>应用一下看看</p>
-</blockquote>
-<h1 id="四、分割线"><a href="#四、分割线" class="headerlink" title="四、分割线"></a>四、分割线</h1><p>需要三个以上的-或者*</p>
-<hr>
-<hr>
-<h1 id="五、图片"><a href="#五、图片" class="headerlink" title="五、图片"></a>五、图片</h1><p>图片需要注意，本地的有点麻烦还得弄到GitHub库，所以选择一个合适的图床来的简单方便。<br>我用的是：<a href="https://sm.ms/" target="_blank" rel="noopener">SM.,MS</a><br>非常好用，上传图片后有直接的Markdown链接引用。</p>
-<p>图片的格式为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![图片名](图片地址)</span><br></pre></td></tr></table></figure>
-<p><img src="https://i.loli.net/2018/07/23/5b54fc9f6d48a.jpg" alt="green.jpg"></p>
-<p>这是图片不带链接的，带链接的跟上面引用网站的一样啦。</p>
-<h1 id="六、列表"><a href="#六、列表" class="headerlink" title="六、列表"></a>六、列表</h1><p><strong>无序列表</strong></p>
-<p>-+*三种其一都可以</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-内容</span><br><span class="line">+内容</span><br><span class="line">*内容</span><br></pre></td></tr></table></figure>
-<p>-嗯嗯</p>
-<p>+嗯嗯</p>
-<p>*嗯嗯</p>
-<p><strong> 有序列表</strong></p>
-<p>···<br>1.内容<br>2.内容<br>3.内容<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">**列表嵌套**</span><br><span class="line"></span><br><span class="line">上级和下级之间敲三个空格</span><br></pre></td></tr></table></figure></p>
-<p>-eee</p>
-<ol>
-<li>aaa</li>
-<li>eee<br>···</li>
-</ol>
-<p>-eee</p>
-<ol>
-<li>f</li>
-<li>f</li>
-</ol>
-<h1 id="七、表格"><a href="#七、表格" class="headerlink" title="七、表格"></a>七、表格</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">表头|表头|表头</span><br><span class="line">---|:--:|---:</span><br><span class="line">内容|内容|内容</span><br><span class="line">内容|内容|内容</span><br></pre></td></tr></table></figure>
-<p>第二行分割表头和内容。</p>
-<ul>
-<li>有一个就行，为了对齐，多加了几个<br>文字默认居左<br>-两边加：表示文字居中<br>-右边加：表示文字居右<br>注：原生的语法两边都要用 | 包起来。此处省略</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>list</th>
-<th style="text-align:left">list</th>
-<th>list:</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>content</td>
-<td style="text-align:left">content</td>
-<td>content</td>
-</tr>
-</tbody>
-</table>
-<h1 id="八、代码"><a href="#八、代码" class="headerlink" title="八、代码"></a>八、代码</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">代码</span><br></pre></td></tr></table></figure>
-<h1 id="九、流程图"><a href="#九、流程图" class="headerlink" title="九、流程图"></a>九、流程图</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">flow</span><br><span class="line">st=&gt;start: 开始</span><br><span class="line">op=&gt;operation: My Operation</span><br><span class="line">cond=&gt;condition: Yes or No?</span><br><span class="line">e=&gt;end</span><br><span class="line">st-&gt;op-&gt;cond</span><br><span class="line">cond(yes)-&gt;e</span><br><span class="line">cond(no)-&gt;op</span><br><span class="line">&amp;</span><br></pre></td></tr></table></figure>
-<p>flow<br>st=&gt;start: 开始<br>op=&gt;operation: My Operation<br>cond=&gt;condition: Yes or No?<br>e=&gt;end<br>st-&gt;op-&gt;cond<br>cond(yes)-&gt;e<br>cond(no)-&gt;op<br>&amp;</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+  </nav>
+
 
 
           </div>
@@ -2066,9 +2083,9 @@
             
               <img class="site-author-image" itemprop="image"
                 src="http://wx2.sinaimg.cn/mw690/d22b15a0ly8flw6ma0bknj20q60qpadi.jpg"
-                alt="dake song" />
+                alt="宋大克的个人博客" />
             
-              <p class="site-author-name" itemprop="name">dake song</p>
+              <p class="site-author-name" itemprop="name">宋大克的个人博客</p>
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
@@ -2079,19 +2096,34 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">10</span>
-                    <span class="site-state-item-name">posts</span>
+                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
               
 
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
               
 
               
                 
                 
                 <div class="site-state-item site-state-tags">
-                  
+                  <a href="/tags/index.html">
                     
                     
                       
@@ -2105,8 +2137,8 @@
                       
                     
                     <span class="site-state-item-count">5</span>
-                    <span class="site-state-item-name">tags</span>
-                  
+                    <span class="site-state-item-name">标签</span>
+                  </a>
                 </div>
               
             </nav>
@@ -2174,13 +2206,12 @@
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">dake song</span>
+  <span class="author" itemprop="copyrightHolder">宋大克的个人博客</span>
 
   
 
   
 </div>
-
 
 
 
@@ -2239,6 +2270,8 @@
 
 
 
+  
+
 
 
 
@@ -2264,6 +2297,11 @@
   
   
     <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
   
 
 
@@ -2305,20 +2343,327 @@
 
   
 
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
 
 
-
-  
-  
-  
-  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
-
-  
-  
-  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
-  
-
-  <script src="/js/src/algolia-search.js?v=6.4.0"></script>
 
 
 
