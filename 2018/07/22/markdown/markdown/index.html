@@ -799,6 +799,11 @@
   
 
   
+    <span class="site-pv" title="Total Views">
+      <i class="fa fa-fa-user-circle"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
 </div>
 
 
@@ -1146,7 +1151,7 @@
 
                   // select top N slices in content
 
-                  var upperBound = parseInt('1');
+                  var upperBound = parseInt('-1');
                   if (upperBound >= 0) {
                     slicesOfContent = slicesOfContent.slice(0, upperBound);
                   }
