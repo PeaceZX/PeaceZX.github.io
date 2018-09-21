@@ -112,18 +112,18 @@
 
 
 
-  <meta name="description" content="在这一篇中，记录的知识点会很杂,因为这是为了面试而搜索整理的，可以没事拿来读一读，或多或少都会有帮助。 数据库索引通常状况下，我们会有大量的数据需要存储，分析和处理。而当前市场上，动辄上百G的内容。对于如此大的数据，查找起来会非常的耗时耗资源，一般查找方法 12sslect * form tablewhere name &amp;lt; 30 用这种方法，需要将数据库中的数据整体过滤一遍，才能找到符合要求">
+  <meta name="description" content="在这一篇中，记录的知识点会很杂,因为这是为了面试而搜索整理的，可以没事拿来读一读，或多或少都会有帮助。 数据库索引通常状况下，我们会有大量的数据需要存储，分析和处理。而当前市场上，动辄上百G的内容。对于如此大的数据，查找起来会非常的耗时耗资源，一般查找方法">
 <meta name="keywords" content="C Python MATLAB Unity3D">
 <meta property="og:type" content="article">
 <meta property="og:title" content="learning">
 <meta property="og:url" content="http://PeaceZX.github.io/2018/08/17/learning/index.html">
 <meta property="og:site_name" content="peacezx的博客-一个95后后端开发程序员">
-<meta property="og:description" content="在这一篇中，记录的知识点会很杂,因为这是为了面试而搜索整理的，可以没事拿来读一读，或多或少都会有帮助。 数据库索引通常状况下，我们会有大量的数据需要存储，分析和处理。而当前市场上，动辄上百G的内容。对于如此大的数据，查找起来会非常的耗时耗资源，一般查找方法 12sslect * form tablewhere name &amp;lt; 30 用这种方法，需要将数据库中的数据整体过滤一遍，才能找到符合要求">
+<meta property="og:description" content="在这一篇中，记录的知识点会很杂,因为这是为了面试而搜索整理的，可以没事拿来读一读，或多或少都会有帮助。 数据库索引通常状况下，我们会有大量的数据需要存储，分析和处理。而当前市场上，动辄上百G的内容。对于如此大的数据，查找起来会非常的耗时耗资源，一般查找方法">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-19T16:26:31.834Z">
+<meta property="og:updated_time" content="2018-09-21T02:04:40.694Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="learning">
-<meta name="twitter:description" content="在这一篇中，记录的知识点会很杂,因为这是为了面试而搜索整理的，可以没事拿来读一读，或多或少都会有帮助。 数据库索引通常状况下，我们会有大量的数据需要存储，分析和处理。而当前市场上，动辄上百G的内容。对于如此大的数据，查找起来会非常的耗时耗资源，一般查找方法 12sslect * form tablewhere name &amp;lt; 30 用这种方法，需要将数据库中的数据整体过滤一遍，才能找到符合要求">
+<meta name="twitter:description" content="在这一篇中，记录的知识点会很杂,因为这是为了面试而搜索整理的，可以没事拿来读一读，或多或少都会有帮助。 数据库索引通常状况下，我们会有大量的数据需要存储，分析和处理。而当前市场上，动辄上百G的内容。对于如此大的数据，查找起来会非常的耗时耗资源，一般查找方法">
 
 
 
@@ -414,7 +414,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="更新于：2018-08-20 00:26:31" itemprop="dateModified" datetime="2018-08-20T00:26:31+08:00">2018-08-20</time>
+                <time title="更新于：2018-09-21 10:04:40" itemprop="dateModified" datetime="2018-09-21T10:04:40+08:00">2018-09-21</time>
               
             
           </span>
@@ -477,6 +477,7 @@
       
         <p><em>在这一篇中，记录的知识点会很杂,因为这是为了面试而搜索整理的，可以没事拿来读一读，或多或少都会有帮助。</em></p>
 <h1 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h1><h2 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h2><p>通常状况下，我们会有大量的数据需要存储，分析和处理。而当前市场上，动辄上百G的内容。对于如此大的数据，查找起来会非常的耗时耗资源，一般查找方法</p>
+<a id="more"></a>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sslect * form table</span><br><span class="line">where name &lt; 30</span><br></pre></td></tr></table></figure>
 <p>用这种方法，需要将数据库中的数据整体过滤一遍，才能找到符合要求的对象。当对象上千万上亿的时候，很显然我们需要寻找更优的方法。那就是<strong>索引</strong>。</p>
 <p>索引是属于表中的列数据。是一种数据结构，我们通过查找索引来查找数据会大大提高效率。而在索引中有<strong>B-TREE, R-TREE, 哈希索引</strong>等方法，下面我一一介绍。</p>
