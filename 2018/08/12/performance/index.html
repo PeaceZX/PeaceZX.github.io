@@ -112,18 +112,18 @@
 
 
 
-  <meta name="description" content="python本身就跑不过C, 干不过C++，性能方面是个软肋。所以高效编程尤为重要。 1. import的使用在导入需要使用到的模块之前，一定要确定，要用到模块里的哪个函数。因为直接 123import osimport numpyimport matplotlib 每次编译都会重复调用，大大降低系统速度。在确定了具体函数之后，我们可以12import numpy as npimport matp">
+  <meta name="description" content="python本身就跑不过C, 干不过C++，性能方面是个软肋。所以高效编程尤为重要。 1. import的使用">
 <meta name="keywords" content="python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="How to increase Python performance">
 <meta property="og:url" content="http://PeaceZX.github.io/2018/08/12/performance/index.html">
 <meta property="og:site_name" content="peacezx的博客-一个95后后端开发程序员">
-<meta property="og:description" content="python本身就跑不过C, 干不过C++，性能方面是个软肋。所以高效编程尤为重要。 1. import的使用在导入需要使用到的模块之前，一定要确定，要用到模块里的哪个函数。因为直接 123import osimport numpyimport matplotlib 每次编译都会重复调用，大大降低系统速度。在确定了具体函数之后，我们可以12import numpy as npimport matp">
+<meta property="og:description" content="python本身就跑不过C, 干不过C++，性能方面是个软肋。所以高效编程尤为重要。 1. import的使用">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-19T11:46:13.511Z">
+<meta property="og:updated_time" content="2018-09-21T02:19:25.920Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="How to increase Python performance">
-<meta name="twitter:description" content="python本身就跑不过C, 干不过C++，性能方面是个软肋。所以高效编程尤为重要。 1. import的使用在导入需要使用到的模块之前，一定要确定，要用到模块里的哪个函数。因为直接 123import osimport numpyimport matplotlib 每次编译都会重复调用，大大降低系统速度。在确定了具体函数之后，我们可以12import numpy as npimport matp">
+<meta name="twitter:description" content="python本身就跑不过C, 干不过C++，性能方面是个软肋。所以高效编程尤为重要。 1. import的使用">
 
 
 
@@ -414,7 +414,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="更新于：2018-08-19 19:46:13" itemprop="dateModified" datetime="2018-08-19T19:46:13+08:00">2018-08-19</time>
+                <time title="更新于：2018-09-21 10:19:25" itemprop="dateModified" datetime="2018-09-21T10:19:25+08:00">2018-09-21</time>
               
             
           </span>
@@ -468,7 +468,8 @@
 
       
         <p><strong><em>python本身就跑不过C, 干不过C++，性能方面是个软肋。所以高效编程尤为重要。</em></strong></p>
-<h1 id="1-import的使用"><a href="#1-import的使用" class="headerlink" title="1. import的使用"></a>1. import的使用</h1><p>在导入需要使用到的模块之前，一定要确定，要用到模块里的哪个函数。因为直接</p>
+<h1 id="1-import的使用"><a href="#1-import的使用" class="headerlink" title="1. import的使用"></a>1. import的使用</h1><a id="more"></a>
+<p>在导入需要使用到的模块之前，一定要确定，要用到模块里的哪个函数。因为直接</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import os</span><br><span class="line">import numpy</span><br><span class="line">import matplotlib</span><br></pre></td></tr></table></figure>
 <p>每次编译都会重复调用，大大降低系统速度。在确定了具体函数之后，我们可以<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">import matplotlib.pyplot as plt</span><br></pre></td></tr></table></figure></p>
 <p>因为局部模块引用会<strong>提高运行速度</strong></p>
@@ -658,7 +659,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">13</span>
+                    <span class="site-state-item-count">12</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
