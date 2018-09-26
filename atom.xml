@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://PeaceZX.github.io/"/>
-  <updated>2018-09-26T07:33:47.455Z</updated>
+  <updated>2018-09-26T07:48:03.142Z</updated>
   <id>http://PeaceZX.github.io/</id>
   
   <author>
@@ -21,48 +21,18 @@
     <link href="http://PeaceZX.github.io/2018/09/26/diary1/"/>
     <id>http://PeaceZX.github.io/2018/09/26/diary1/</id>
     <published>2018-09-26T07:33:47.000Z</published>
-    <updated>2018-09-26T07:33:47.455Z</updated>
+    <updated>2018-09-26T07:48:03.142Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;&lt;em&gt;毕业了，就这么毕业了。&lt;/em&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;em&gt;毕业了，就这么毕业了。&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;没有任何多余的想法，只想抓紧进入岗位，抛洒一片热血。&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;小学六年，初中三年，高中三年，大学四年，研究生一年，&lt;br&gt;6+3+3+4+1=17，&lt;strong&gt;17年&lt;/strong&gt;
-        
-      
     
     </summary>
     
       <category term="杂谈" scheme="http://PeaceZX.github.io/categories/%E6%9D%82%E8%B0%88/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>关于C语言输入的探究</title>
-    <link href="http://PeaceZX.github.io/2018/09/25/C%E8%AF%AD%E8%A8%80%E8%BE%93%E5%85%A5/"/>
-    <id>http://PeaceZX.github.io/2018/09/25/C语言输入/</id>
-    <published>2018-09-25T03:40:07.000Z</published>
-    <updated>2018-09-26T07:32:46.412Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;&lt;em&gt;首先需要知道，在C语言中没有字符串类型，用字符数组处理字符串&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;字符串数组定义： char 数组名[a][b]&lt;/p&gt;
-&lt;p&gt;有一维，二维数组，  &lt;em&gt;数组名既是数组名又是这个字符串的首地址&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;输入输出方法：逐个字符输入输出：&lt;strong&gt;%c&lt;/strong&gt;   整个字符串输入输出：&lt;strong&gt;%s&lt;/strong&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="干货" scheme="http://PeaceZX.github.io/categories/%E5%B9%B2%E8%B4%A7/"/>
-    
-    
-      <category term="C" scheme="http://PeaceZX.github.io/tags/C/"/>
     
   </entry>
   
@@ -81,6 +51,29 @@
 &lt;p&gt;输入输出方法：逐个字符输入输出：&lt;strong&gt;%c&lt;/strong&gt;   整个字符串输入输出：&lt;strong&gt;%s&lt;/strong&gt;&lt;/p&gt;
     
     </summary>
+    
+    
+      <category term="C" scheme="http://PeaceZX.github.io/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于C语言输入的探究</title>
+    <link href="http://PeaceZX.github.io/2018/09/25/C%E8%AF%AD%E8%A8%80%E8%BE%93%E5%85%A5/"/>
+    <id>http://PeaceZX.github.io/2018/09/25/C语言输入/</id>
+    <published>2018-09-25T03:40:07.000Z</published>
+    <updated>2018-09-26T07:47:58.357Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;&lt;em&gt;首先需要知道，在C语言中没有字符串类型，用字符数组处理字符串&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;字符串数组定义： char 数组名[a][b]&lt;/p&gt;
+&lt;p&gt;有一维，二维数组，  &lt;em&gt;数组名既是数组名又是这个字符串的首地址&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;输入输出方法：逐个字符输入输出：&lt;strong&gt;%c&lt;/strong&gt;   整个字符串输入输出：&lt;strong&gt;%s&lt;/strong&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="干货" scheme="http://PeaceZX.github.io/categories/%E5%B9%B2%E8%B4%A7/"/>
     
     
       <category term="C" scheme="http://PeaceZX.github.io/tags/C/"/>
