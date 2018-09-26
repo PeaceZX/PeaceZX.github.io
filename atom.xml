@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>peacezx的博客-一个95后后端开发程序员</title>
   
-  <subtitle>伯明翰大学, 华为-消费者BG软件开发</subtitle>
+  <subtitle>华为-消费者BG软件开发</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://PeaceZX.github.io/"/>
-  <updated>2018-09-26T07:48:03.142Z</updated>
+  <updated>2018-09-26T08:57:05.533Z</updated>
   <id>http://PeaceZX.github.io/</id>
   
   <author>
@@ -21,13 +21,20 @@
     <link href="http://PeaceZX.github.io/2018/09/26/diary1/"/>
     <id>http://PeaceZX.github.io/2018/09/26/diary1/</id>
     <published>2018-09-26T07:33:47.000Z</published>
-    <updated>2018-09-26T07:48:03.142Z</updated>
+    <updated>2018-09-26T08:57:05.533Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;em&gt;毕业了，就这么毕业了。&lt;/em&gt;&lt;/p&gt;
+      
+      
+        
+        
+          &lt;p&gt;&lt;em&gt;毕业了，就这么毕业了。&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;没有任何多余的想法，只想抓紧进入岗位，抛洒一片热血。&lt;/p&gt;
 &lt;hr&gt;
+&lt;p&gt;小学六年，初中三年，高中三年，大学四年，研究生一年，&lt;br&gt;6+3+3+4+1=17，&lt;strong&gt;17年&lt;/strong&gt;
+        
+      
     
     </summary>
     

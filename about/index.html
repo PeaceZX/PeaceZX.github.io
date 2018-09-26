@@ -114,14 +114,14 @@
 
   <meta name="description" content="十年饮冰，难凉热血！  瞧啊！您现在浏览的博客写于一位卑微的后端程序员，在命运的变迁下同时代里扮演着受害者与加害者的双重角色。 摆脱虚荣与华丽的装饰。我对于过往那些心中的怒火的无畏探索现在依然栩栩如生；我发誓我要做一个秉承代码军规的高级开发者，坚持以人为本，用户至上的输出策略；对于产品经理的裁决只有复仇，而那带有还原性的复仇不会徒劳的，因为它的价值和真实性终有一天会证明那些警醒者和高尚者是正确的。">
 <meta property="og:type" content="website">
-<meta property="og:title" content="about">
+<meta property="og:title" content="About">
 <meta property="og:url" content="http://PeaceZX.github.io/about/index.html">
 <meta property="og:site_name" content="peacezx的博客-一个95后后端开发程序员">
 <meta property="og:description" content="十年饮冰，难凉热血！  瞧啊！您现在浏览的博客写于一位卑微的后端程序员，在命运的变迁下同时代里扮演着受害者与加害者的双重角色。 摆脱虚荣与华丽的装饰。我对于过往那些心中的怒火的无畏探索现在依然栩栩如生；我发誓我要做一个秉承代码军规的高级开发者，坚持以人为本，用户至上的输出策略；对于产品经理的裁决只有复仇，而那带有还原性的复仇不会徒劳的，因为它的价值和真实性终有一天会证明那些警醒者和高尚者是正确的。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-25T03:27:46.212Z">
+<meta property="og:updated_time" content="2018-09-26T09:13:26.471Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="about">
+<meta name="twitter:title" content="About">
 <meta name="twitter:description" content="十年饮冰，难凉热血！  瞧啊！您现在浏览的博客写于一位卑微的后端程序员，在命运的变迁下同时代里扮演着受害者与加害者的双重角色。 摆脱虚荣与华丽的装饰。我对于过往那些心中的怒火的无畏探索现在依然栩栩如生；我发誓我要做一个秉承代码军规的高级开发者，坚持以人为本，用户至上的输出策略；对于产品经理的裁决只有复仇，而那带有还原性的复仇不会徒劳的，因为它的价值和真实性终有一天会证明那些警醒者和高尚者是正确的。">
 
 
@@ -131,8 +131,6 @@
 
 
 
-  <link rel="canonical" href="http://PeaceZX.github.io/about/"/>
-
 
 
 <script type="text/javascript" id="page.configurations">
@@ -141,7 +139,7 @@
   };
 </script>
 
-  <title>about | peacezx的博客-一个95后后端开发程序员</title>
+  <title>About | peacezx的博客-一个95后后端开发程序员</title>
   
 
 
@@ -212,7 +210,7 @@
     </div>
     
       
-        <p class="site-subtitle">伯明翰大学, 华为-消费者BG软件开发</p>
+        <p class="site-subtitle">华为-消费者BG软件开发</p>
       
     
   </div>
@@ -365,7 +363,7 @@
     <div class="post-block page">
       <header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">about</h1>
+<h1 class="post-title" itemprop="name headline">About</h1>
 
 <div class="post-meta">
   
@@ -581,6 +579,19 @@
 
 
         
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+
+  
+    <span class="site-pv" title="Total Views">
+      <i class="fa fa-fa-user-circle"></i>
+      有<span class="busuanzi-value" id="busuanzi_value_site_pv"></span>来过哦
+    </span>
+  
+</div>
+
 
 
 
@@ -628,8 +639,6 @@
 
 
 
-  
-
 
 
 
@@ -655,11 +664,6 @@
   
   
     <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
   
 
 
@@ -1056,75 +1060,6 @@
 
 
   
-
-  
-  <script>
-    
-    function showTime(Counter) {
-      var entries = [];
-      var $visitors = $(".leancloud_visitors");
-
-      $visitors.each(function () {
-        entries.push( $(this).attr("id").trim() );
-      });
-
-      Counter('get', '/classes/Counter', { where: JSON.stringify({ url: { "$in": entries } }) })
-        .done(function ({ results }) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.url;
-            var time = item.time;
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for(var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if( countSpan.text() == '') {
-              countSpan.text(0);
-            }
-          }
-        })
-        .fail(function ({ responseJSON }) {
-          console.log("LeanCloud Counter Error: " + responseJSON.code + " " + responseJSON.error);
-        });
-    }
-    
-
-    $(function() {
-      $.get('https://app-router.leancloud.cn/2/route?appId=' + "SwOAqzo3SX3G0FVqzxbKyycv-gzGzoHsz")
-        .done(function ({ api_server }) {
-          var Counter = function (method, url, data) {
-            return $.ajax({
-              method: method,
-              url: `https://${api_server}/1.1${url}`,
-              headers: {
-                'X-LC-Id': "SwOAqzo3SX3G0FVqzxbKyycv-gzGzoHsz",
-                'X-LC-Key': "5nrCbsS4P2A3BhLG8eIHQn4W",
-                'Content-Type': 'application/json',
-              },
-              data: data,
-            });
-          };
-          
-          if ($('.post-title-link').length >= 1) {
-            showTime(Counter);
-          }
-          
-        })
-    });
-  </script>
-
-
 
   
 

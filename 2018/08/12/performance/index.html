@@ -132,8 +132,6 @@
 
 
 
-  <link rel="canonical" href="http://PeaceZX.github.io/2018/08/12/performance/"/>
-
 
 
 <script type="text/javascript" id="page.configurations">
@@ -213,7 +211,7 @@
     </div>
     
       
-        <p class="site-subtitle">伯明翰大学, 华为-消费者BG软件开发</p>
+        <p class="site-subtitle">华为-消费者BG软件开发</p>
       
     
   </div>
@@ -438,25 +436,14 @@
               
             </span>
           
-        <span id="busuanzi_container_page_pv">
-        <span id="busuanzi_value_page_pv"></span>
+        
+        
         </span>
           
             
           
 
           
-          
-             <span id="/2018/08/12/performance/" class="leancloud_visitors" data-flag-title="Several ways to increase Python performance">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">Views：</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
           
 
           
@@ -634,17 +621,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -754,22 +732,6 @@
       </section>
 
       
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-import的使用"><span class="nav-number">1.</span> <span class="nav-text">1. import的使用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-使用映射来替换条件搜索"><span class="nav-number">2.</span> <span class="nav-text">2. 使用映射来替换条件搜索</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-减少函数调用的数量"><span class="nav-number">3.</span> <span class="nav-text">3. 减少函数调用的数量</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-使用局部变量"><span class="nav-number">4.</span> <span class="nav-text">4. 使用局部变量</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-直接迭代序列元素"><span class="nav-number">5.</span> <span class="nav-text">5. 直接迭代序列元素</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-用生成器表达式替换列表解析"><span class="nav-number">6.</span> <span class="nav-text">6. 用生成器表达式替换列表解析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-先编译后调用"><span class="nav-number">7.</span> <span class="nav-text">7.先编译后调用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#8-模块编程"><span class="nav-number">8.</span> <span class="nav-text">8.模块编程</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
-      
 
       
 
@@ -804,6 +766,19 @@
 
 
         
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+
+  
+    <span class="site-pv" title="Total Views">
+      <i class="fa fa-fa-user-circle"></i>
+      有<span class="busuanzi-value" id="busuanzi_value_site_pv"></span>来过哦
+    </span>
+  
+</div>
+
 
 
 
@@ -851,8 +826,6 @@
 
 
 
-  
-
 
 
 
@@ -878,11 +851,6 @@
   
   
     <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
   
 
 
@@ -1279,72 +1247,6 @@
 
 
   
-
-  
-  <script>
-    
-    function addCount(Counter) {
-      var $visitors = $(".leancloud_visitors");
-      var url = $visitors.attr('id').trim();
-      var title = $visitors.attr('data-flag-title').trim();
-
-      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
-        .done(function ({ results }) {
-          if (results.length > 0) {
-            var counter = results[0];
-            
-            Counter('put', `/classes/Counter/${counter.objectId}`, JSON.stringify({ time: { "__op":"Increment", "amount":1 } }))
-            
-            .done(function () {
-                  var $element = $(document.getElementById(url));
-                  $element.find('.leancloud-visitors-count').text(counter.time + 1);
-            })
-            
-            .fail(function ({ responseJSON }) {
-                console.log('Failed to save Visitor num, with error message: ' + responseJSON.error);
-            })
-          } else {
-            
-              Counter('post', '/classes/Counter', JSON.stringify({ title: title, url: url, time: 1}))
-                .done(function () {
-                  var $element = $(document.getElementById(url));
-                  $element.find('.leancloud-visitors-count').text(1);
-                })
-                .fail(function () {
-                  console.log('Failed to create');
-                });
-            
-          }
-        })
-      .fail(function ({ responseJSON }) {
-        console.log('LeanCloud Counter Error:' + responseJSON.code + " " + responseJSON.error);
-      });
-    }
-    
-
-    $(function() {
-      $.get('https://app-router.leancloud.cn/2/route?appId=' + "SwOAqzo3SX3G0FVqzxbKyycv-gzGzoHsz")
-        .done(function ({ api_server }) {
-          var Counter = function (method, url, data) {
-            return $.ajax({
-              method: method,
-              url: `https://${api_server}/1.1${url}`,
-              headers: {
-                'X-LC-Id': "SwOAqzo3SX3G0FVqzxbKyycv-gzGzoHsz",
-                'X-LC-Key': "5nrCbsS4P2A3BhLG8eIHQn4W",
-                'Content-Type': 'application/json',
-              },
-              data: data,
-            });
-          };
-          
-          addCount(Counter);
-          
-        })
-    });
-  </script>
-
-
 
   
 

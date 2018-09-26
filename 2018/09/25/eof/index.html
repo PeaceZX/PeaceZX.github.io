@@ -132,8 +132,6 @@
 
 
 
-  <link rel="canonical" href="http://PeaceZX.github.io/2018/09/25/eof/"/>
-
 
 
 <script type="text/javascript" id="page.configurations">
@@ -213,7 +211,7 @@
     </div>
     
       
-        <p class="site-subtitle">伯明翰大学, 华为-消费者BG软件开发</p>
+        <p class="site-subtitle">华为-消费者BG软件开发</p>
       
     
   </div>
@@ -438,25 +436,14 @@
               
             </span>
           
-        <span id="busuanzi_container_page_pv">
-        <span id="busuanzi_value_page_pv"></span>
+        
+        
         </span>
           
             
           
 
           
-          
-             <span id="/2018/09/25/eof/" class="leancloud_visitors" data-flag-title="EOF问题">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">Views：</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
           
 
           
@@ -751,6 +738,19 @@
 
 
         
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+
+  
+    <span class="site-pv" title="Total Views">
+      <i class="fa fa-fa-user-circle"></i>
+      有<span class="busuanzi-value" id="busuanzi_value_site_pv"></span>来过哦
+    </span>
+  
+</div>
+
 
 
 
@@ -798,8 +798,6 @@
 
 
 
-  
-
 
 
 
@@ -825,11 +823,6 @@
   
   
     <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
   
 
 
@@ -1226,72 +1219,6 @@
 
 
   
-
-  
-  <script>
-    
-    function addCount(Counter) {
-      var $visitors = $(".leancloud_visitors");
-      var url = $visitors.attr('id').trim();
-      var title = $visitors.attr('data-flag-title').trim();
-
-      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
-        .done(function ({ results }) {
-          if (results.length > 0) {
-            var counter = results[0];
-            
-            Counter('put', `/classes/Counter/${counter.objectId}`, JSON.stringify({ time: { "__op":"Increment", "amount":1 } }))
-            
-            .done(function () {
-                  var $element = $(document.getElementById(url));
-                  $element.find('.leancloud-visitors-count').text(counter.time + 1);
-            })
-            
-            .fail(function ({ responseJSON }) {
-                console.log('Failed to save Visitor num, with error message: ' + responseJSON.error);
-            })
-          } else {
-            
-              Counter('post', '/classes/Counter', JSON.stringify({ title: title, url: url, time: 1}))
-                .done(function () {
-                  var $element = $(document.getElementById(url));
-                  $element.find('.leancloud-visitors-count').text(1);
-                })
-                .fail(function () {
-                  console.log('Failed to create');
-                });
-            
-          }
-        })
-      .fail(function ({ responseJSON }) {
-        console.log('LeanCloud Counter Error:' + responseJSON.code + " " + responseJSON.error);
-      });
-    }
-    
-
-    $(function() {
-      $.get('https://app-router.leancloud.cn/2/route?appId=' + "SwOAqzo3SX3G0FVqzxbKyycv-gzGzoHsz")
-        .done(function ({ api_server }) {
-          var Counter = function (method, url, data) {
-            return $.ajax({
-              method: method,
-              url: `https://${api_server}/1.1${url}`,
-              headers: {
-                'X-LC-Id': "SwOAqzo3SX3G0FVqzxbKyycv-gzGzoHsz",
-                'X-LC-Key': "5nrCbsS4P2A3BhLG8eIHQn4W",
-                'Content-Type': 'application/json',
-              },
-              data: data,
-            });
-          };
-          
-          addCount(Counter);
-          
-        })
-    });
-  </script>
-
-
 
   
 
