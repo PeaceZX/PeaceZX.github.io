@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://PeaceZX.github.io/"/>
-  <updated>2018-09-25T08:00:24.660Z</updated>
+  <updated>2018-09-26T07:33:47.455Z</updated>
   <id>http://PeaceZX.github.io/</id>
   
   <author>
@@ -17,11 +17,61 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>记于生日前</title>
+    <link href="http://PeaceZX.github.io/2018/09/26/diary1/"/>
+    <id>http://PeaceZX.github.io/2018/09/26/diary1/</id>
+    <published>2018-09-26T07:33:47.000Z</published>
+    <updated>2018-09-26T07:33:47.455Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;em&gt;毕业了，就这么毕业了。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;没有任何多余的想法，只想抓紧进入岗位，抛洒一片热血。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;小学六年，初中三年，高中三年，大学四年，研究生一年，&lt;br&gt;6+3+3+4+1=17，&lt;strong&gt;17年&lt;/strong&gt;
+        
+      
+    
+    </summary>
+    
+      <category term="杂谈" scheme="http://PeaceZX.github.io/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>关于C语言输入的探究</title>
     <link href="http://PeaceZX.github.io/2018/09/25/C%E8%AF%AD%E8%A8%80%E8%BE%93%E5%85%A5/"/>
     <id>http://PeaceZX.github.io/2018/09/25/C语言输入/</id>
     <published>2018-09-25T03:40:07.000Z</published>
-    <updated>2018-09-25T08:00:24.660Z</updated>
+    <updated>2018-09-26T07:32:46.412Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;&lt;em&gt;首先需要知道，在C语言中没有字符串类型，用字符数组处理字符串&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;字符串数组定义： char 数组名[a][b]&lt;/p&gt;
+&lt;p&gt;有一维，二维数组，  &lt;em&gt;数组名既是数组名又是这个字符串的首地址&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;输入输出方法：逐个字符输入输出：&lt;strong&gt;%c&lt;/strong&gt;   整个字符串输入输出：&lt;strong&gt;%s&lt;/strong&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="干货" scheme="http://PeaceZX.github.io/categories/%E5%B9%B2%E8%B4%A7/"/>
+    
+    
+      <category term="C" scheme="http://PeaceZX.github.io/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于C语言输入的探究</title>
+    <link href="http://PeaceZX.github.io/2018/09/25/C%E8%AF%AD%E8%A8%80%E8%BE%93%E5%85%A5/C%E8%AF%AD%E8%A8%80%E8%BE%93%E5%85%A5/"/>
+    <id>http://PeaceZX.github.io/2018/09/25/C语言输入/C语言输入/</id>
+    <published>2018-09-25T03:40:07.000Z</published>
+    <updated>2018-09-26T07:28:05.777Z</updated>
     
     <summary type="html">
     
@@ -64,7 +114,7 @@
     <link href="http://PeaceZX.github.io/2018/09/25/module/"/>
     <id>http://PeaceZX.github.io/2018/09/25/module/</id>
     <published>2018-09-25T03:39:38.000Z</published>
-    <updated>2018-09-25T03:39:38.498Z</updated>
+    <updated>2018-09-26T07:32:46.443Z</updated>
     
     <summary type="html">
     
@@ -72,6 +122,8 @@
 &lt;p&gt;if we only import the module name:&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;import sys&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
     
     </summary>
+    
+      <category term="干货" scheme="http://PeaceZX.github.io/categories/%E5%B9%B2%E8%B4%A7/"/>
     
     
       <category term="python" scheme="http://PeaceZX.github.io/tags/python/"/>
@@ -83,7 +135,7 @@
     <link href="http://PeaceZX.github.io/2018/09/25/tuple/"/>
     <id>http://PeaceZX.github.io/2018/09/25/tuple/</id>
     <published>2018-09-25T03:39:26.000Z</published>
-    <updated>2018-09-25T07:37:42.028Z</updated>
+    <updated>2018-09-26T07:32:43.109Z</updated>
     
     <summary type="html">
     
@@ -92,6 +144,8 @@
 &lt;p&gt;tuples are &lt;strong&gt;immutable&lt;/strong&gt;&lt;br&gt;lists are &lt;strong&gt;mutable&lt;/strong&gt;&lt;br&gt;
     
     </summary>
+    
+      <category term="干货" scheme="http://PeaceZX.github.io/categories/%E5%B9%B2%E8%B4%A7/"/>
     
     
       <category term="python" scheme="http://PeaceZX.github.io/tags/python/"/>
@@ -103,7 +157,7 @@
     <link href="http://PeaceZX.github.io/2018/09/25/list/"/>
     <id>http://PeaceZX.github.io/2018/09/25/list/</id>
     <published>2018-09-25T03:39:03.000Z</published>
-    <updated>2018-09-25T08:00:48.722Z</updated>
+    <updated>2018-09-26T07:32:46.442Z</updated>
     
     <summary type="html">
     
@@ -111,6 +165,8 @@
 &lt;p&gt;&lt;strong&gt;list.extend(iterable)&lt;/strong&gt;&lt;br&gt;
     
     </summary>
+    
+      <category term="干货" scheme="http://PeaceZX.github.io/categories/%E5%B9%B2%E8%B4%A7/"/>
     
     
       <category term="python" scheme="http://PeaceZX.github.io/tags/python/"/>
@@ -142,7 +198,7 @@
     <link href="http://PeaceZX.github.io/2018/09/25/inputandoutput/"/>
     <id>http://PeaceZX.github.io/2018/09/25/inputandoutput/</id>
     <published>2018-09-25T03:32:16.000Z</published>
-    <updated>2018-09-25T07:55:00.858Z</updated>
+    <updated>2018-09-26T07:32:46.442Z</updated>
     
     <summary type="html">
     
@@ -154,6 +210,8 @@
     
     </summary>
     
+      <category term="干货" scheme="http://PeaceZX.github.io/categories/%E5%B9%B2%E8%B4%A7/"/>
+    
     
       <category term="python" scheme="http://PeaceZX.github.io/tags/python/"/>
     
@@ -164,7 +222,7 @@
     <link href="http://PeaceZX.github.io/2018/09/25/eof/"/>
     <id>http://PeaceZX.github.io/2018/09/25/eof/</id>
     <published>2018-09-25T03:31:52.000Z</published>
-    <updated>2018-09-25T07:55:09.104Z</updated>
+    <updated>2018-09-26T07:32:46.441Z</updated>
     
     <summary type="html">
     
@@ -177,6 +235,8 @@
       
     
     </summary>
+    
+      <category term="干货" scheme="http://PeaceZX.github.io/categories/%E5%B9%B2%E8%B4%A7/"/>
     
     
       <category term="C" scheme="http://PeaceZX.github.io/tags/C/"/>

@@ -1,0 +1,121 @@
+<hr>
+<p>title: 关于C语言输入的探究<br>tags: C</p>
+<h2 id="date-2018-09-25-11-40-07"><a href="#date-2018-09-25-11-40-07" class="headerlink" title="date: 2018-09-25 11:40:07"></a>date: 2018-09-25 11:40:07</h2><p><strong><em>首先需要知道，在C语言中没有字符串类型，用字符数组处理字符串</em></strong></p>
+<p>字符串数组定义： char 数组名[a][b]</p>
+<p>有一维，二维数组，  <em>数组名既是数组名又是这个字符串的首地址</em></p>
+<p>输入输出方法：逐个字符输入输出：<strong>%c</strong>   整个字符串输入输出：<strong>%s</strong></p>
+<!--more-->
+<hr>
+<h1 id="scanf-输入printf-输出"><a href="#scanf-输入printf-输出" class="headerlink" title="scanf()输入printf()输出"></a>scanf()输入printf()输出</h1><p><strong>逐个字符处理：</strong></p>
+<pre><code>#include&lt;stdio.h&gt;
+int main()
+{
+    char ch[5];
+    for (int i = 0; i &lt; 5; i++)
+    {
+        scanf(&quot;%c&quot;, &amp;ch[i]);
+    }
+    for (int i = 0; i &lt; 5; i++)
+    {
+        printf(&quot;%c&quot;, ch[i]);
+    }
+    system(&quot;pause&quot;);
+    return 0;
+</code></pre><p><strong>整个字符串处理：</strong></p>
+<pre><code>#include&lt;stdio.h&gt;
+int main()
+{
+    char ch[5];
+    scanf(&quot;%s&quot;, ch); //无需&amp; 对于数组ch，就是首地址所以不需要取地址符
+    printf(&quot;%s&quot;, ch);
+    system(&quot;pause&quot;);
+    return 0;
+}
+</code></pre><p><strong>说明：</strong><br>以字符串为单位处理时，<em>直接使用数组名，</em> 不需要加&amp;<br>输入字符串时，字符个数要小于数组的长度，例如输入5个字符，定义的字符数组至少应该有6个。<br>输入字符串时，遇到回车或者空格，输入结束，并且自动在串后面加上结束标志’\0’<br>输出字符串时，遇到字符串结束标志”\0”，输出结束</p>
+<p>scanf()配合%s使用，但是这种方法一次只能获取一个单词，即遇到空格等字符就会返回。比如：</p>
+<pre><code>i love you
+</code></pre><p>输出为</p>
+<pre><code>i
+</code></pre><h2 id="scanf就无能无力，但是我们可以用gets"><a href="#scanf就无能无力，但是我们可以用gets" class="headerlink" title="scanf就无能无力，但是我们可以用gets()"></a><strong><em>scanf就无能无力，但是我们可以用gets()</em></strong></h2><h1 id="gets-和-puts-在-lt-string-h-gt-头文件中"><a href="#gets-和-puts-在-lt-string-h-gt-头文件中" class="headerlink" title="gets() 和 puts() 在&lt;string.h&gt;头文件中"></a>gets() 和 puts() 在&lt;string.h&gt;头文件中</h1><h3 id="puts"><a href="#puts" class="headerlink" title="puts()"></a>puts()</h3><p>向显示器输出字符串（输出结束，自动换行，即用’\n’代替’\0’)<br>字符串数组必须以’\0’结束</p>
+<h3 id="gets"><a href="#gets" class="headerlink" title="gets()"></a>gets()</h3><p>gets()函数用来从标准输入设备（键盘）读取字符串直到 <strong>换行符</strong> 结束，但是换行符会被丢弃，然后再末尾添加 <strong>“\0”</strong> 字符。<br>gets()读完结束后系统 <strong>自动会将’\n’置换成’\0’</strong><br>调用格式： gets(s)<br>其中s为字符串变量（字符串数组名或者字符串指针）。以回车结束，自动加’\0’.<br>输入串长度应小于字符数组维数，字符串中可以包含空格</p>
+<p>gets()函数与scanf(“%s:”,&amp;s)/<em>scanf(“%s”,s)</em>/相似,但不完全相同，使用scanf(“%s”,&amp;s)函数输入字符串时存在一个问题，如果输入了 <strong>空格</strong> 会以为字符串结束，空格后的字符将作为下一个输入项处理，但gets()函数将接收整个字符串直到遇到换行为止。</p>
+<p><strong>不同点</strong></p>
+<ol>
+<li>scanf不能接受空格、制表符Tab、回车等；而gets可以</li>
+</ol>
+<p><strong>相同点</strong></p>
+<ol>
+<li>字符串接受结束后 <strong>自动加’\0’</strong></li>
+</ol>
+<h3 id="gets-存在严重缺陷：它不会检测数组能否装的下输入行"><a href="#gets-存在严重缺陷：它不会检测数组能否装的下输入行" class="headerlink" title="gets()存在严重缺陷：它不会检测数组能否装的下输入行"></a>gets()存在严重缺陷：它不会检测数组能否装的下输入行</h3><p>比如定义</p>
+<pre><code>char src[5];
+</code></pre><p><em>数组名就相当于一个指针，也就是数组的首地址。</em></p>
+<p>如果我们输入的字符大于5，填满这5个空间后，gets()函数就会访问 <em>未被分配</em> 的内存空间，如果这片空间 <em>已经有数据，</em> 这时程序就会发生错误，而中断。<br>C99y不建议使用，C11直接抛弃。</p>
+<p>建议使用fgets()函数来代替gets()</p>
+<p>函数声明： char <em>fgets(char </em>buf, int bufsize, FILE <em>stream)</em>；</p>
+<p>注意第二个参数 <strong>bufsize</strong>, 这个参数就限制了读取的字符的个数，这就可以解决gets()函数的缺陷。</p>
+<p>fgets()函数主要用于 <strong>读取文件</strong>， 如果要读取键盘，则stream参数应该为 <strong>stdin</strong>.<br>需要注意的是，如果bufsize设置为n, 那么fgets()函数最多读取 <strong>n-1</strong> 个字符（包括最后的 <strong>‘\n’</strong>，读完结束后系统将自动在最后加 <strong>‘\0’</strong> 为什么说“最多”，那是因为如果在之前遇到了换行符，fgets()函数也会返回。<br>还有一点，fgets()不会自动添加换行，但是可以读取换行符。</p>
+<p><strong><em>注意：</em></strong><br>在使用fgets的时候，预设了size为N，这个时候我们最多能读取的字符串个数为N-1，剩下的会用新的fgets()来读取，看如下代码：</p>
+<pre><code>int main(int argc, char *argv[]) {
+    char str2[10];
+    fgets(str2,3,stdin);
+    printf(&quot;First 2 str: %s\n&quot;,str2);
+    printf(&quot;The length of str is: %d\n&quot;,strlen(str2));
+    fgets(str2,3,stdin);
+    printf(&quot;The left str: %s\n&quot;,str2);
+    printf(&quot;The length of str is: %d\n&quot;,strlen(str2));
+}
+</code></pre><p>输出为：<br><img src="https://i.loli.net/2018/09/19/5ba1cefd26690.png" alt="输出结果"></p>
+<p>当使用gets(),输入字符串是多少个，就会输出多少个字符串，需要注意输入的字符串个数不能&gt;N,超过的部分会存在新的内存，如果那片内存有数据就会中断程序。</p>
+<pre><code>int main(int argc, char *argv[]) {
+    char str2[3];
+    gets(str2);
+    printf(&quot;str: %s\n&quot;,str2);
+    printf(&quot;The length of str is: %d\n&quot;,strlen(str2));
+}
+</code></pre><p>结果为：<br><img src="https://i.loli.net/2018/09/20/5ba3982798aff.png" alt="微信截图_20180919122655.png](https://i.loli.net/2018/09/20/5ba3982798aff.png)"></p>
+<p>两种新情况：</p>
+<ol>
+<li><p>当从键盘上输入 <strong>&lt;=N-1</strong> 个字符（包括  <strong>‘\n’</strong> ）时，那么字符串str会以 <strong>‘\n\0’</strong> 结尾，这就造成了strlen(str)比预计的大1，可以利用下面的代码将’\n’去掉：</p>
+<pre><code>if(str[strlen(str)-1] == &apos;\n&apos;)
+{
+ str[strlen(str)-1] = &apos;\0&apos;;
+}
+</code></pre></li>
+<li><p>当从键盘上输入 <strong>&gt;N-1</strong> 个字符（包括’\n’)时，那么字符串会以 <strong>‘\0’</strong> 结尾。</p>
+</li>
+</ol>
+<p>再详细说明一下，输入字符大于N的情况：</p>
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+#define N 5
+
+int main()
+{
+    char s1[N];
+    char s2[N];
+    fgets(s1, N, stdin);
+//    gets(s1);
+    if(s1[strlen(s1) - 1] == &apos;\n&apos;) {      // 去掉换行符
+        s1[strlen(s1) - 1] = &apos;\0&apos;;   
+    }
+
+//    fflush(stdin);                               //清空缓冲区
+    fgets(s2, N, stdin);
+//    gets(s2);
+    if(s2[strlen(s2) - 1] == &apos;\n&apos;) {      // 去掉换行符
+        s2[strlen(s2) - 1] = &apos;\0&apos;;   
+    }
+
+    printf(&quot;%s %s&quot;, s1, s2);
+
+    return 0;
+}
+</code></pre><p>输出结果为：</p>
+<pre><code>12345
+1234 5
+</code></pre><p>也就是说S1=1234， S2=5，第一个fgets只读取了1234，因为最多读取N-1个数。剩下 <strong>5’\n’</strong> 被放入了缓冲区，当程序运行到第二个fgets的时候会直接读取缓冲区的数据，直到遇到 <strong>‘\n’</strong> .此时 <strong>s1=1234’\0’</strong>, <strong>s2=5’\0’</strong>.<br>这个时候，我可以在第二个fgets前加一句 <strong>fflush(stdin)</strong>， 起到清除缓冲区的作用，后面就不会输出5了</p>
+<pre><code>12345
+
+1234
+</code></pre><p>在读取完s1之后，利用 <strong>fflush(stdin)</strong> 清除缓冲区。</p>
