@@ -112,22 +112,18 @@
 
 
 
-  <meta name="description" content="什么是Unity3D强大的游戏开发引擎，基于此，游戏的开发将变得异常简单。 开发脚本 CSharpJavaScript和C#是主要的脚本语言">
-<meta name="keywords" content="Unity3D">
+  <meta name="description" content="ModulesA module is a file containing Python definitions and statements. (suffix .py is the file name and also the module name)Within a module, the module name(as a string) is available as the value of">
+<meta name="keywords" content="python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Unity3D总结">
-<meta property="og:url" content="http://PeaceZX.github.io/2018/07/23/unity3D-Project/Unity3D_projectFlowchart/index.html">
+<meta property="og:title" content="浅谈python的module以及if __name__ == __main__的理解">
+<meta property="og:url" content="http://PeaceZX.github.io/2018/09/25/module/index.html">
 <meta property="og:site_name" content="peacezx的博客-一个95后后端开发程序员">
-<meta property="og:description" content="什么是Unity3D强大的游戏开发引擎，基于此，游戏的开发将变得异常简单。 开发脚本 CSharpJavaScript和C#是主要的脚本语言">
+<meta property="og:description" content="ModulesA module is a file containing Python definitions and statements. (suffix .py is the file name and also the module name)Within a module, the module name(as a string) is available as the value of">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://i.loli.net/2018/07/26/5b58d735e3bc6.png">
-<meta property="og:image" content="https://assets-cdn.github.com/images/icons/emoji/unicode/263a.png?v8">
-<meta property="og:image" content="https://assets-cdn.github.com/images/icons/emoji/unicode/2728.png?v8">
-<meta property="og:updated_time" content="2018-09-21T02:20:23.725Z">
+<meta property="og:updated_time" content="2018-09-25T03:39:38.498Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Unity3D总结">
-<meta name="twitter:description" content="什么是Unity3D强大的游戏开发引擎，基于此，游戏的开发将变得异常简单。 开发脚本 CSharpJavaScript和C#是主要的脚本语言">
-<meta name="twitter:image" content="https://i.loli.net/2018/07/26/5b58d735e3bc6.png">
+<meta name="twitter:title" content="浅谈python的module以及if __name__ == __main__的理解">
+<meta name="twitter:description" content="ModulesA module is a file containing Python definitions and statements. (suffix .py is the file name and also the module name)Within a module, the module name(as a string) is available as the value of">
 
 
 
@@ -136,7 +132,7 @@
 
 
 
-  <link rel="canonical" href="http://PeaceZX.github.io/2018/07/23/unity3D-Project/Unity3D_projectFlowchart/"/>
+  <link rel="canonical" href="http://PeaceZX.github.io/2018/09/25/module/"/>
 
 
 
@@ -146,7 +142,7 @@
   };
 </script>
 
-  <title>Unity3D总结 | peacezx的博客-一个95后后端开发程序员</title>
+  <title>浅谈python的module以及if __name__ == __main__的理解 | peacezx的博客-一个95后后端开发程序员</title>
   
 
 
@@ -217,7 +213,7 @@
     </div>
     
       
-        <p class="site-subtitle">伯明翰大学, 华为-大数据云开发</p>
+        <p class="site-subtitle">伯明翰大学, 华为-消费者BG软件开发</p>
       
     
   </div>
@@ -359,7 +355,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://PeaceZX.github.io/2018/07/23/unity3D-Project/Unity3D_projectFlowchart/">
+    <link itemprop="mainEntityOfPage" href="http://PeaceZX.github.io/2018/09/25/module/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="宋大克的个人博客">
@@ -376,7 +372,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Unity3D总结
+          <h1 class="post-title" itemprop="name headline">浅谈python的module以及if __name__ == __main__的理解
               
             
           </h1>
@@ -401,49 +397,15 @@
                 
               
 
-              <time title="创建于：2018-07-23 18:01:18" itemprop="dateCreated datePublished" datetime="2018-07-23T18:01:18+08:00">2018-07-23</time>
+              <time title="创建于：2018-09-25 11:39:38" itemprop="dateCreated datePublished" datetime="2018-09-25T11:39:38+08:00">2018-09-25</time>
             
 
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="更新于：2018-09-21 10:20:23" itemprop="dateModified" datetime="2018-09-21T10:20:23+08:00">2018-09-21</time>
-              
             
           </span>
 
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/干货/" itemprop="url" rel="index"><span itemprop="name">干货</span></a></span>
-
-                
-                
-              
-            </span>
-          
         <span id="busuanzi_container_page_pv">
-        本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+        <span id="busuanzi_value_page_pv"></span>
         </span>
           
             
@@ -471,19 +433,40 @@
       
 
       
-        <p><img src="https://i.loli.net/2018/07/26/5b58d735e3bc6.png" alt="下载.png"></p>
-<h1 id="什么是Unity3D"><a href="#什么是Unity3D" class="headerlink" title="什么是Unity3D"></a>什么是Unity3D<img class="github-emoji" title="relaxed" alt="relaxed" src="https://assets-cdn.github.com/images/icons/emoji/unicode/263a.png?v8" height="20" width="20"></h1><p>强大的游戏开发引擎，基于此，游戏的开发将变得异常简单。</p>
-<h1 id="开发脚本-CSharp"><a href="#开发脚本-CSharp" class="headerlink" title="开发脚本 CSharp"></a>开发脚本 CSharp</h1><p>JavaScript和C#是主要的脚本语言<br><a id="more"></a></p>
-<h1 id="我的项目步骤"><a href="#我的项目步骤" class="headerlink" title="我的项目步骤"></a>我的项目步骤</h1><ol>
-<li>建立地形，因为我是VR游戏开发，所以使用3D地形。</li>
-<li>在地形上建立山脉，湖泊和植被</li>
-<li>根据需要在Asset Store下载需要的的Asset。</li>
-<li>布置场景</li>
-<li>编程：这一步主要是碰撞触发事件</li>
-<li>选择Player设置为Openvr</li>
-<li>Built到window平台</li>
+        <h1 id="Modules"><a href="#Modules" class="headerlink" title="Modules"></a>Modules</h1><p>A module is <strong>a file</strong> containing Python definitions and statements. (suffix .py is the file name and also the module name)<br>Within a module, the module name(as a string) is available as the value of the global variable <strong><em>name</em></strong></p>
+<p>if we only import the module name:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import sys</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<p>In this way, we can not use the fuctions defined in sys directly, but, we are allowed to access the functions by using module name:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sys.ppp()</span><br><span class="line">sys.ooo()</span><br></pre></td></tr></table></figure></p>
+<p>we need module name before functions.</p>
+<p>Additionaly, if we intend to use a function often, we can assign it to a local name:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ppp = sys.ppp</span><br><span class="line">ppp()</span><br></pre></td></tr></table></figure></p>
+<h1 id="More-on-Modules"><a href="#More-on-Modules" class="headerlink" title="More on Modules"></a>More on Modules</h1><p>Modules can import other modules.<br>The imported module names are placed in the importing module global symbol table.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">from fibo import fib,fib2</span><br></pre></td></tr></table></figure></p>
+<p>On this condition, module name is not defined, it is not introduced. And we know the functions which we will use in the module.</p>
+<p>There is even a variant to import all names that a module defines:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">from fibo import *</span><br></pre></td></tr></table></figure></p>
+<p>in most cases python programmers do not use this facility since it introduces an unknow set of names into the interpreter, possibly hiding some things you have already defined.<br>Additionally, it cause unreadable code.</p>
+<h1 id="executing-modules-as-scripts"><a href="#executing-modules-as-scripts" class="headerlink" title="executing modules as scripts"></a>executing modules as scripts</h1><p>when we run a python module Within<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python fibo.py&lt;arguments&gt;</span><br></pre></td></tr></table></figure></p>
+<p>the code in the module will be executed, just as if you imported it, but with the <strong><strong>mame</strong></strong> set to <strong>“<strong>main</strong>“</strong>. By adding this code at the end of your module:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">if __name__ == &quot;__main__&quot;:</span><br><span class="line">    import sys</span><br><span class="line">    fib(int(sys.argv[1]))</span><br></pre></td></tr></table></figure></p>
+<p>you can make the file usable as a script as well as an importable module., because the code that parses the command line only runs if the module is executed as the main file:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python fibo.py 50</span><br><span class="line">1 1 2 3 5 8</span><br></pre></td></tr></table></figure></p>
+<p>if the module is imported, the code is not run:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import fibo</span><br></pre></td></tr></table></figure></p>
+<p>this is often used either to provide a convenient <strong>user interface</strong> to a module, or for testing purposes(running the module as a script executes a test suite)</p>
+<h2 id="程序入口"><a href="#程序入口" class="headerlink" title="程序入口"></a>程序入口</h2><p>像c,c++都有一个 <strong>main函数</strong> 作为程序的入口，程序的运行会从main开始。<br>python则不同，它属于脚本语言，不像编译型语言那样先将程序编译成二进制再运行，而是动态的逐行解释运行。从脚本第一行开始运行，没有同统一的入口。</p>
+<p>一个python源码文件除了可以被直接运行外，还可以作为模块（也就是库）被导入。不管是直接运行还是导入，最顶层的代码都会被运行（python用缩进来区分代码层次）。而事实上，有一部分代码我不希望被运行。</p>
+<p>现在我有一个q.py文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">PI = 3.14</span><br><span class="line"></span><br><span class="line">def main():</span><br><span class="line">    print(&quot;PI:&quot;,PI)</span><br><span class="line"></span><br><span class="line">main()</span><br></pre></td></tr></table></figure></p>
+<p>还有一个test.py文件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">from q import PI</span><br><span class="line"></span><br><span class="line">def cal(r):</span><br><span class="line">    return PI * ( r ** 2)</span><br><span class="line"></span><br><span class="line">def main():</span><br><span class="line">    print(&quot;area:&quot;,cal(2))</span><br><span class="line">main()</span><br></pre></td></tr></table></figure></p>
+<p>在test.py里我导入了q.py中的PI值，现在我运行test.py输出为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PI: 3.14</span><br><span class="line">area: 12.56</span><br></pre></td></tr></table></figure></p>
+<p>我不想输出PI啊，只需要area就好，因为在运行test.py时候，所有包含的文件都会被运行。这个时候，if <strong>__</strong>name__ == ‘<strong>__</strong>main__’ 就派上用场了。把q.py改一下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">PI = 3.14</span><br><span class="line"></span><br><span class="line">def main():</span><br><span class="line">    print(&quot;PI:&quot;,PI)</span><br><span class="line"></span><br><span class="line">if __name__ == &quot;__main__&quot;:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+<p>然后再运行test.py,结果为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">area: 12.56</span><br></pre></td></tr></table></figure></p>
+<p>终于达到了想要的结果。</p>
+<p>if <strong>__</strong>name__ == ‘<strong>__</strong>main__’就相当于 <strong>python模拟的程序入口。</strong> 主要注意的是，python本身并没有规定这么写，这只是一种编码习惯。总的来说，由于模块之间相互引用，不同模块可能都有这样的定义。到底哪个入口程序被选中，这取决于 <strong>__</strong>name__ 的值</p>
+<h2 id="name"><a href="#name" class="headerlink" title="__name__"></a><strong>__</strong>name__</h2><p><strong>__</strong>name__是内置变量，用于表示当前模块的名字。同时还能反映一个包的结构。</p>
+<p>如果模块被直接运行，则代码块被运行；如果模块是被导入的，则代码块不被运行。</p>
+<h1 id="The-module-search-path"><a href="#The-module-search-path" class="headerlink" title="The module search path"></a>The module search path</h1><p>When a module named <strong>spam</strong> is imported, the interpreter first searches for a built-in module with that name. If not found, it then search for a file named <strong>spam.py</strong> in a list of directories given by the variable <strong>sys.path</strong>, <strong>sys.path</strong> is initialized from these locations.</p>
+<ol>
+<li>The directory containing the input script (or the current directory when no file is specified)</li>
+<li><strong>PYTHONPATH</strong> (a list of directory names, with the same syntax as the shell variable <strong>PATH</strong>)</li>
+<li>The installation-dependent default.</li>
 </ol>
-<p><img class="github-emoji" title="sparkles" alt="sparkles" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2728.png?v8" height="20" width="20"></p>
+<h1 id="The-dir-function"><a href="#The-dir-function" class="headerlink" title="The dir() function"></a>The <strong>dir()</strong> function</h1><p>The built-in function <strong>dir()</strong> is used to find out which names a module defines. It returns a sorted list of strings.<br><strong>dir()</strong> does not list the names of built-in functions and variables. If you want a list of those, they are defined in the standard module <strong>builtins</strong>.</p>
 
       
     </div>
@@ -494,14 +477,6 @@
     
     
 
-    
-      <div>
-        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
-    <img id="wechat_subscriber_qcode" src="https://i.loli.net/2018/08/16/5b759052baf41.jpg" alt="宋大克的个人博客 wechat" style="width: 200px; max-width: 100%;"/>
-    <div>欢迎您扫一扫上面的微信公众号，订阅我的博客！</div>
-</div>
-
-      </div>
     
 
     
@@ -541,7 +516,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Unity3D/" rel="tag"># Unity3D</a>
+            <a href="/tags/python/" rel="tag"># python</a>
           
         </div>
       
@@ -554,8 +529,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/23/MySQL/我的基础理解/" rel="next" title="MySQL我的基础理解">
-                <i class="fa fa-chevron-left"></i> MySQL我的基础理解
+              <a href="/2018/09/25/tuple/" rel="next" title="浅谈Tuple & Dictionary以及loop的几种方法">
+                <i class="fa fa-chevron-left"></i> 浅谈Tuple & Dictionary以及loop的几种方法
               </a>
             
           </div>
@@ -564,8 +539,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/07/24/unity3D-Project/unity3D-Project/" rel="prev" title="unity3D_Project">
-                unity3D_Project <i class="fa fa-chevron-right"></i>
+              <a href="/2018/09/25/python/" rel="prev" title="python中strings & lists, end关键字和循环语句">
+                python中strings & lists, end关键字和循环语句 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -645,7 +620,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">12</span>
+                    <span class="site-state-item-count">16</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -657,6 +632,8 @@
                 <div class="site-state-item site-state-categories">
                   <a href="/categories/index.html">
                     
+                    
+                      
                     
                       
                     
@@ -681,11 +658,7 @@
                     
                       
                     
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -747,7 +720,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是Unity3D"><span class="nav-number">1.</span> <span class="nav-text">什么是Unity3D</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#开发脚本-CSharp"><span class="nav-number">2.</span> <span class="nav-text">开发脚本 CSharp</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#我的项目步骤"><span class="nav-number">3.</span> <span class="nav-text">我的项目步骤</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Modules"><span class="nav-number">1.</span> <span class="nav-text">Modules</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#More-on-Modules"><span class="nav-number">2.</span> <span class="nav-text">More on Modules</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#executing-modules-as-scripts"><span class="nav-number">3.</span> <span class="nav-text">executing modules as scripts</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#程序入口"><span class="nav-number">3.1.</span> <span class="nav-text">程序入口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#name"><span class="nav-number">3.2.</span> <span class="nav-text">__name__</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#The-module-search-path"><span class="nav-number">4.</span> <span class="nav-text">The module search path</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#The-dir-function"><span class="nav-number">5.</span> <span class="nav-text">The dir() function</span></a></li></ol></div>
             
 
           </div>
@@ -794,7 +767,7 @@
   
     <span class="site-uv" title="Total Visitors">
       <i class="fa fa-fa-user-circle"></i>
-      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      有<span class="busuanzi-value" id="busuanzi_value_site_uv"></span>人来过哦
     </span>
   
 
@@ -946,7 +919,7 @@
     var isfetched = false;
     var isXml = true;
     // Search DB path;
-    var search_path = "search.json";
+    var search_path = "search.xml";
     if (search_path.length === 0) {
       search_path = "search.xml";
     } else if (/json$/i.test(search_path)) {

@@ -112,20 +112,18 @@
 
 
 
-  <meta name="description" content="Terrian">
-<meta name="keywords" content="Unity3D">
+  <meta name="description" content="tupletuple is another sequence data type. A tuple consists of a number of values separated by commas.They may be input with or without parenthess.It is not possible to assign to the indivdual items of">
+<meta name="keywords" content="python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="unity3D_Project">
-<meta property="og:url" content="http://PeaceZX.github.io/2018/07/24/unity3D-Project/unity3D-Project/index.html">
+<meta property="og:title" content="浅谈Tuple &amp; Dictionary以及loop的几种方法">
+<meta property="og:url" content="http://PeaceZX.github.io/2018/09/25/tuple/index.html">
 <meta property="og:site_name" content="peacezx的博客-一个95后后端开发程序员">
-<meta property="og:description" content="Terrian">
+<meta property="og:description" content="tupletuple is another sequence data type. A tuple consists of a number of values separated by commas.They may be input with or without parenthess.It is not possible to assign to the indivdual items of">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://i.loli.net/2018/07/26/5b58d735e3bc6.png">
-<meta property="og:updated_time" content="2018-09-21T02:20:32.444Z">
+<meta property="og:updated_time" content="2018-09-25T07:37:42.028Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="unity3D_Project">
-<meta name="twitter:description" content="Terrian">
-<meta name="twitter:image" content="https://i.loli.net/2018/07/26/5b58d735e3bc6.png">
+<meta name="twitter:title" content="浅谈Tuple &amp; Dictionary以及loop的几种方法">
+<meta name="twitter:description" content="tupletuple is another sequence data type. A tuple consists of a number of values separated by commas.They may be input with or without parenthess.It is not possible to assign to the indivdual items of">
 
 
 
@@ -134,7 +132,7 @@
 
 
 
-  <link rel="canonical" href="http://PeaceZX.github.io/2018/07/24/unity3D-Project/unity3D-Project/"/>
+  <link rel="canonical" href="http://PeaceZX.github.io/2018/09/25/tuple/"/>
 
 
 
@@ -144,7 +142,7 @@
   };
 </script>
 
-  <title>unity3D_Project | peacezx的博客-一个95后后端开发程序员</title>
+  <title>浅谈Tuple & Dictionary以及loop的几种方法 | peacezx的博客-一个95后后端开发程序员</title>
   
 
 
@@ -215,7 +213,7 @@
     </div>
     
       
-        <p class="site-subtitle">伯明翰大学, 华为-大数据云开发</p>
+        <p class="site-subtitle">伯明翰大学, 华为-消费者BG软件开发</p>
       
     
   </div>
@@ -357,7 +355,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://PeaceZX.github.io/2018/07/24/unity3D-Project/unity3D-Project/">
+    <link itemprop="mainEntityOfPage" href="http://PeaceZX.github.io/2018/09/25/tuple/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="宋大克的个人博客">
@@ -374,7 +372,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">unity3D_Project
+          <h1 class="post-title" itemprop="name headline">浅谈Tuple & Dictionary以及loop的几种方法
               
             
           </h1>
@@ -399,49 +397,19 @@
                 
               
 
-              <time title="创建于：2018-07-24 16:35:43" itemprop="dateCreated datePublished" datetime="2018-07-24T16:35:43+08:00">2018-07-24</time>
+              <time title="创建于：2018-09-25 11:39:26 / 更新于：15:37:42" itemprop="dateCreated datePublished" datetime="2018-09-25T11:39:26+08:00">2018-09-25</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="更新于：2018-09-21 10:20:32" itemprop="dateModified" datetime="2018-09-21T10:20:32+08:00">2018-09-21</time>
               
             
           </span>
 
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/干货/" itemprop="url" rel="index"><span itemprop="name">干货</span></a></span>
-
-                
-                
-              
-            </span>
-          
         <span id="busuanzi_container_page_pv">
-        本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+        <span id="busuanzi_value_page_pv"></span>
         </span>
           
             
@@ -469,13 +437,18 @@
       
 
       
-        <p><img src="https://i.loli.net/2018/07/26/5b58d735e3bc6.png" alt="下载.png"></p>
-<h1 id="Terrian"><a href="#Terrian" class="headerlink" title="Terrian"></a>Terrian</h1><a id="more"></a>
-<p>This is a VR project. So, building the virtual garden based on a 3D terrian is necessary. It looks like a flat plane after creating this gameObject. A terrian contains a lot of points, like hill, lakes, trees and grass. All the above should be carefully designed to make the terrian as real as possiable.</p>
-<h1 id="River"><a href="#River" class="headerlink" title="River"></a>River</h1><p>After creating the terrian. Raising it up, then digging a hole to make a lake or river. The lower part of the terrian will be filled of water. import the standard asset, there is a gameObject called water can be used.</p>
-<h1 id="The-texture"><a href="#The-texture" class="headerlink" title="The texture"></a>The texture</h1><p>Creating the walking lane to make sure the player in this game know which way should go.</p>
-<p>#Flower and trees</p>
-<p>I use several assets from the assesr store.</p>
+        <h1 id="tuple"><a href="#tuple" class="headerlink" title="tuple"></a>tuple</h1><p><strong>tuple</strong> is another sequence data type.</p>
+<p>A tuple consists of a number of values separated by commas.<br>They may be input with or without parenthess.<br>It is not possible to assign to the indivdual items of a tuple, however it is possible to create tuples which contain mutable objects, such as list.</p>
+<p>tuples are <strong>immutable</strong><br>lists are <strong>mutable</strong><br><a id="more"></a></p>
+<h1 id="dictionary"><a href="#dictionary" class="headerlink" title="dictionary"></a>dictionary</h1><p>unlike sequences, which are indexed by a range of numbers, dictionaries are indexed by <strong>keys</strong>, which can be any immutable type; <em>strings</em> and <em>numbers</em> can always be keys.</p>
+<p>list(d.keys()) returns a list of all the keys used in the dictionary, in arbitrary order (we can use sorted(d.keys())) to sort it). To check whether a single key is in the dictionary use the <strong>in</strong> keyword</p>
+<h2 id="looping-technique"><a href="#looping-technique" class="headerlink" title="looping technique"></a>looping technique</h2><p><em>when looping through dictionaires</em>, the key and correspinding value can be retrieved at the same time using the <strong>items()</strong> method.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; knights = &#123;&apos;gallahad&apos;: &apos;the pure&apos;, &apos;robin&apos;: &apos;the brave&apos;&#125;</span><br><span class="line">&gt;&gt;&gt; for k, v in knights.items():</span><br><span class="line">...     print(k, v)</span><br><span class="line">...</span><br><span class="line">gallahad the pure</span><br><span class="line">robin the brave</span><br></pre></td></tr></table></figure></p>
+<p><em>When looping through a sequence</em>, the position index and corresponding value can be retrieved at the same time using the <strong>enumerate()</strong> function. 这是一个内置函数哦<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; for i, v in enumerate([&apos;tic&apos;, &apos;tac&apos;, &apos;toe&apos;]):</span><br><span class="line">...     print(i, v)</span><br><span class="line">...</span><br><span class="line">0 tic</span><br><span class="line">1 tac</span><br><span class="line">2 toe</span><br></pre></td></tr></table></figure></p>
+<p>如果不用enumerate，普通的for语句：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a = [&quot;a&quot;,&quot;b&quot;,&quot;c&quot;]</span><br><span class="line">i=0</span><br><span class="line">for element in a:</span><br><span class="line">   print(i,element)</span><br><span class="line">   i = i + 1</span><br></pre></td></tr></table></figure></p>
+<p><em>To loop over two or more sequences at the same time</em>, the entries can be paired with the <strong>zip()</strong> function.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; questions = [&apos;name&apos;, &apos;quest&apos;, &apos;favorite color&apos;]</span><br><span class="line">&gt;&gt;&gt; answers = [&apos;lancelot&apos;, &apos;the holy grail&apos;, &apos;blue&apos;]</span><br><span class="line">&gt;&gt;&gt; for q, a in zip(questions, answers):</span><br><span class="line">...     print(&apos;What is your &#123;0&#125;?  It is &#123;1&#125;.&apos;.format(q, a))</span><br><span class="line">...</span><br><span class="line">What is your name?  It is lancelot.</span><br><span class="line">What is your quest?  It is the holy grail.</span><br><span class="line">What is your favorite color?  It is blue.</span><br></pre></td></tr></table></figure></p>
+<p><em>To loop over a sequence in reverse</em>, first specify the sequence in a forward direction and then call the reversed() function.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; for i in reversed(range(1, 10, 2)):</span><br><span class="line">...     print(i)</span><br><span class="line">...</span><br><span class="line">9</span><br><span class="line">7</span><br><span class="line">5</span><br><span class="line">3</span><br><span class="line">1</span><br></pre></td></tr></table></figure></p>
+<p><em>To loop over a sequence in sorted order</em>, use the sorted() function which returns a new sorted list while leaving the source unaltered.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; basket = [&apos;apple&apos;, &apos;orange&apos;, &apos;apple&apos;, &apos;pear&apos;, &apos;orange&apos;, &apos;banana&apos;]</span><br><span class="line">&gt;&gt;&gt; for f in sorted(set(basket)):</span><br><span class="line">...     print(f)</span><br><span class="line">...</span><br><span class="line">apple</span><br><span class="line">banana</span><br><span class="line">orange</span><br><span class="line">pear</span><br></pre></td></tr></table></figure></p>
+<h1 id="more-on-conditions"><a href="#more-on-conditions" class="headerlink" title="more on conditions"></a>more on conditions</h1><p><strong>in</strong> and <strong>not in</strong> check whether a value occurs(does not occur) in a sequence.<br><strong>is</strong> and <strong>is not</strong> compare whether two objects are really the same object<br>this only matters for mutable objects like lists.</p>
 
       
     </div>
@@ -486,14 +459,6 @@
     
     
 
-    
-      <div>
-        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
-    <img id="wechat_subscriber_qcode" src="https://i.loli.net/2018/08/16/5b759052baf41.jpg" alt="宋大克的个人博客 wechat" style="width: 200px; max-width: 100%;"/>
-    <div>欢迎您扫一扫上面的微信公众号，订阅我的博客！</div>
-</div>
-
-      </div>
     
 
     
@@ -533,7 +498,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Unity3D/" rel="tag"># Unity3D</a>
+            <a href="/tags/python/" rel="tag"># python</a>
           
         </div>
       
@@ -546,8 +511,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/23/unity3D-Project/Unity3D_projectFlowchart/" rel="next" title="Unity3D总结">
-                <i class="fa fa-chevron-left"></i> Unity3D总结
+              <a href="/2018/09/25/list/" rel="next" title="Python列表的相关函数">
+                <i class="fa fa-chevron-left"></i> Python列表的相关函数
               </a>
             
           </div>
@@ -556,8 +521,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/07/25/git/git/" rel="prev" title="git">
-                git <i class="fa fa-chevron-right"></i>
+              <a href="/2018/09/25/module/" rel="prev" title="浅谈python的module以及if __name__ == __main__的理解">
+                浅谈python的module以及if __name__ == __main__的理解 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -637,7 +602,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">12</span>
+                    <span class="site-state-item-count">16</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -649,6 +614,8 @@
                 <div class="site-state-item site-state-categories">
                   <a href="/categories/index.html">
                     
+                    
+                      
                     
                       
                     
@@ -673,11 +640,7 @@
                     
                       
                     
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -739,7 +702,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Terrian"><span class="nav-number">1.</span> <span class="nav-text">Terrian</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#River"><span class="nav-number">2.</span> <span class="nav-text">River</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#The-texture"><span class="nav-number">3.</span> <span class="nav-text">The texture</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#tuple"><span class="nav-number">1.</span> <span class="nav-text">tuple</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#dictionary"><span class="nav-number">2.</span> <span class="nav-text">dictionary</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#looping-technique"><span class="nav-number">2.1.</span> <span class="nav-text">looping technique</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#more-on-conditions"><span class="nav-number">3.</span> <span class="nav-text">more on conditions</span></a></li></ol></div>
             
 
           </div>
@@ -786,7 +749,7 @@
   
     <span class="site-uv" title="Total Visitors">
       <i class="fa fa-fa-user-circle"></i>
-      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      有<span class="busuanzi-value" id="busuanzi_value_site_uv"></span>人来过哦
     </span>
   
 
@@ -938,7 +901,7 @@
     var isfetched = false;
     var isXml = true;
     // Search DB path;
-    var search_path = "search.json";
+    var search_path = "search.xml";
     if (search_path.length === 0) {
       search_path = "search.xml";
     } else if (/json$/i.test(search_path)) {
