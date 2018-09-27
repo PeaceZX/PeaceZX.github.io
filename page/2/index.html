@@ -207,7 +207,7 @@
     </div>
     
       
-        <p class="site-subtitle">华为-消费者BG软件开发</p>
+        <p class="site-subtitle">华为上研所-消费者BG软件开发</p>
       
     
   </div>
@@ -349,6 +349,366 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://PeaceZX.github.io/2018/09/25/eof/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="宋大克的个人博客">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://wx2.sinaimg.cn/mw690/d22b15a0ly8flw6ma0bknj20q60qpadi.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="peacezx的博客-一个95后后端开发程序员">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/25/eof/" itemprop="url">
+                  EOF问题
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建于：2018-09-25 11:31:52" itemprop="dateCreated datePublished" datetime="2018-09-25T11:31:52+08:00">2018-09-25</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="更新于：2018-09-26 15:32:46" itemprop="dateModified" datetime="2018-09-26T15:32:46+08:00">2018-09-26</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/干货/" itemprop="url" rel="index"><span itemprop="name">干货</span></a></span>
+
+                
+                
+              
+            </span>
+          
+        
+        
+        </span>
+          
+            
+          
+
+          
+          
+
+          
+          
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>先看一道字符串的题目：<br>求字符串最后一个单词的长度<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"> int main()</span><br><span class="line"> &#123;</span><br><span class="line">     char str[5000];</span><br><span class="line">     int i,j=0,N=0;</span><br><span class="line">     while(scanf(&quot;%c&quot;, &amp;str[j])!=EOF)</span><br><span class="line">     &#123;</span><br><span class="line">         if(str[j]==&apos; &apos;)</span><br><span class="line">             N=0;</span><br><span class="line">         else</span><br><span class="line">             N++;</span><br><span class="line">         if(j&lt;4999)</span><br><span class="line">             j++;</span><br><span class="line">     &#125;</span><br><span class="line">     if(N!=0)</span><br><span class="line">         N=N-1;      //为啥减一，因为字符串以\0结尾哦，要注意！！！</span><br><span class="line">     printf(&quot;%d&quot;,N);</span><br><span class="line">     return 0;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure></p>
+<p>在while里有个EOF，作为 <strong>读取结束</strong> 标志，来探究一下EOF：<br>C语言中，EOF常被作为文件结束的标志。在while循环中以EOF作为文件结束标志。</p>
+<p><strong>linux系统下，</strong> 在输入回车换行后的空行位置，按 <strong>ctrl+d</strong> (先按ctrl键，不放，再按d键）</p>
+<p><strong>windows系统下，</strong> 在输入回车换行后的空行位置，按 <strong>ctrl+z</strong>，再回车确认</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://PeaceZX.github.io/2018/08/30/presentation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="宋大克的个人博客">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://wx2.sinaimg.cn/mw690/d22b15a0ly8flw6ma0bknj20q60qpadi.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="peacezx的博客-一个95后后端开发程序员">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/08/30/presentation/" itemprop="url">
+                  FP Presentation Structure
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建于：2018-08-30 14:39:02" itemprop="dateCreated datePublished" datetime="2018-08-30T14:39:02+08:00">2018-08-30</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="更新于：2018-09-24 11:17:09" itemprop="dateModified" datetime="2018-09-24T11:17:09+08:00">2018-09-24</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/干货/" itemprop="url" rel="index"><span itemprop="name">干货</span></a></span>
+
+                
+                
+              
+            </span>
+          
+        
+        
+        </span>
+          
+            
+          
+
+          
+          
+
+          
+          
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="Presentation-Structure"><a href="#Presentation-Structure" class="headerlink" title="Presentation Structure"></a>Presentation Structure</h1><h2 id="The-Background"><a href="#The-Background" class="headerlink" title="The Background"></a>The Background</h2><ol>
+<li>talking about the <strong>reasons</strong> why i choose this topic(relative each time visit her, she don’t know who am i, a lot of news reports people sufffer from dementia)</li>
+<li>then explore the <strong>symptom of dementia</strong>, the <strong>currently treatment for dementia</strong>.</li>
+<li>the study of elderly people</li>
+<li>cognitive functions(memory, attention, comprehension, language)</li>
+<li>VR, AR, MR comparision
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/08/30/presentation/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://PeaceZX.github.io/2018/08/17/learning/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -369,7 +729,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 <a class="post-title-link" href="/2018/08/17/learning/" itemprop="url">
-                  一切为了通过面试（纯干货为面试而准备）
+                  一切为了通过面试（为面试而准备）
                 </a>
               
             
@@ -412,7 +772,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="更新于：2018-09-25 16:04:08" itemprop="dateModified" datetime="2018-09-25T16:04:08+08:00">2018-09-25</time>
+                <time title="更新于：2018-09-27 07:56:58" itemprop="dateModified" datetime="2018-09-27T07:56:58+08:00">2018-09-27</time>
               
             
           </span>
@@ -1070,186 +1430,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://PeaceZX.github.io/2018/07/23/MySQL/我的基础理解/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="宋大克的个人博客">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://wx2.sinaimg.cn/mw690/d22b15a0ly8flw6ma0bknj20q60qpadi.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="peacezx的博客-一个95后后端开发程序员">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/07/23/MySQL/我的基础理解/" itemprop="url">
-                  MySQL我的基础理解
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建于：2018-07-23 10:51:39" itemprop="dateCreated datePublished" datetime="2018-07-23T10:51:39+08:00">2018-07-23</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="更新于：2018-09-21 10:20:52" itemprop="dateModified" datetime="2018-09-21T10:20:52+08:00">2018-09-21</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/干货/" itemprop="url" rel="index"><span itemprop="name">干货</span></a></span>
-
-                
-                
-              
-            </span>
-          
-        
-        
-        </span>
-          
-            
-          
-
-          
-          
-
-          
-          
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body han-init-context" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><a href="https://i.loli.net/2018/07/26/5b58d6ad8c43c.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2018/07/26/5b58d6ad8c43c.png" alt="images.png"></a></p>
-<p>前两天入门了一下MySQL,毕竟市场上使用率最高的数据库。</p>
-<p>我觉得吧，数据库就是一个存放和管理数据的仓库，就像商品被分类存放在不同的仓库一样，这里不过是把商品变成了数据。<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/07/23/MySQL/我的基础理解/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://PeaceZX.github.io/2018/07/22/终于！把个人博客搭建起来了！/终于！把个人博客搭建起来了！/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1626,7 +1806,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">17</span>
+                    <span class="site-state-item-count">18</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1655,6 +1835,8 @@
                 <div class="site-state-item site-state-tags">
                   <a href="/tags/index.html">
                     
+                    
+                      
                     
                       
                     

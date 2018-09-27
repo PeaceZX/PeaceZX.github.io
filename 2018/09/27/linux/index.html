@@ -112,20 +112,34 @@
 
 
 
-  <meta name="description" content="前两天入门了一下MySQL,毕竟市场上使用率最高的数据库。 我觉得吧，数据库就是一个存放和管理数据的仓库，就像商品被分类存放在不同的仓库一样，这里不过是把商品变成了数据。">
-<meta name="keywords" content="MySQL">
+  <meta name="description" content="进程相关操作，很好的提高效率哦  进程： 执行中的程序当程序以可执行文件存放在存储中，并且运行的时候，每个进程都会被动态的分配  系统资源 内存 安全属性 与之相关的状态">
+<meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MySQL我的基础理解">
-<meta property="og:url" content="http://PeaceZX.github.io/2018/07/23/MySQL/我的基础理解/index.html">
+<meta property="og:title" content="linux一些基本的进程管理命令">
+<meta property="og:url" content="http://PeaceZX.github.io/2018/09/27/linux/index.html">
 <meta property="og:site_name" content="peacezx的博客-一个95后后端开发程序员">
-<meta property="og:description" content="前两天入门了一下MySQL,毕竟市场上使用率最高的数据库。 我觉得吧，数据库就是一个存放和管理数据的仓库，就像商品被分类存放在不同的仓库一样，这里不过是把商品变成了数据。">
+<meta property="og:description" content="进程相关操作，很好的提高效率哦  进程： 执行中的程序当程序以可执行文件存放在存储中，并且运行的时候，每个进程都会被动态的分配  系统资源 内存 安全属性 与之相关的状态">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://i.loli.net/2018/07/26/5b58d6ad8c43c.png">
-<meta property="og:updated_time" content="2018-09-21T02:20:52.459Z">
+<meta property="og:image" content="https://i.loli.net/2018/09/27/5bac2987663ca.png">
+<meta property="og:image" content="https://i.loli.net/2018/09/27/5bac29c852582.png">
+<meta property="og:image" content="https://i.loli.net/2018/09/27/5bac29f80032b.png">
+<meta property="og:image" content="https://i.loli.net/2018/09/27/5bac2a1e5a9c7.png">
+<meta property="og:image" content="https://i.loli.net/2018/09/27/5bac2a69aec31.png">
+<meta property="og:image" content="https://i.loli.net/2018/09/27/5bac2a78d5121.png">
+<meta property="og:image" content="https://i.loli.net/2018/09/27/5bac2a9f2b421.png">
+<meta property="og:image" content="https://i.loli.net/2018/09/27/5bac2ac4045c9.png">
+<meta property="og:image" content="https://i.loli.net/2018/09/27/5bac2b171348d.png">
+<meta property="og:image" content="https://i.loli.net/2018/09/27/5bac2b1725c22.png">
+<meta property="og:image" content="https://i.loli.net/2018/09/27/5bac2b44a954e.png">
+<meta property="og:image" content="https://i.loli.net/2018/09/27/5bac2b7feabc2.png">
+<meta property="og:image" content="https://i.loli.net/2018/09/27/5bac2b800a616.png">
+<meta property="og:image" content="https://i.loli.net/2018/09/27/5bac2b800bed2.png">
+<meta property="og:image" content="https://i.loli.net/2018/09/27/5bac2bb4393da.png">
+<meta property="og:updated_time" content="2018-09-27T01:03:17.752Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MySQL我的基础理解">
-<meta name="twitter:description" content="前两天入门了一下MySQL,毕竟市场上使用率最高的数据库。 我觉得吧，数据库就是一个存放和管理数据的仓库，就像商品被分类存放在不同的仓库一样，这里不过是把商品变成了数据。">
-<meta name="twitter:image" content="https://i.loli.net/2018/07/26/5b58d6ad8c43c.png">
+<meta name="twitter:title" content="linux一些基本的进程管理命令">
+<meta name="twitter:description" content="进程相关操作，很好的提高效率哦  进程： 执行中的程序当程序以可执行文件存放在存储中，并且运行的时候，每个进程都会被动态的分配  系统资源 内存 安全属性 与之相关的状态">
+<meta name="twitter:image" content="https://i.loli.net/2018/09/27/5bac2987663ca.png">
 
 
 
@@ -142,7 +156,7 @@
   };
 </script>
 
-  <title>MySQL我的基础理解 | peacezx的博客-一个95后后端开发程序员</title>
+  <title>linux一些基本的进程管理命令 | peacezx的博客-一个95后后端开发程序员</title>
   
 
 
@@ -213,7 +227,7 @@
     </div>
     
       
-        <p class="site-subtitle">华为-消费者BG软件开发</p>
+        <p class="site-subtitle">华为上研所-消费者BG软件开发</p>
       
     
   </div>
@@ -355,7 +369,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://PeaceZX.github.io/2018/07/23/MySQL/我的基础理解/">
+    <link itemprop="mainEntityOfPage" href="http://PeaceZX.github.io/2018/09/27/linux/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="宋大克的个人博客">
@@ -372,7 +386,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">MySQL我的基础理解
+          <h1 class="post-title" itemprop="name headline">linux一些基本的进程管理命令
               
             
           </h1>
@@ -397,25 +411,9 @@
                 
               
 
-              <time title="创建于：2018-07-23 10:51:39" itemprop="dateCreated datePublished" datetime="2018-07-23T10:51:39+08:00">2018-07-23</time>
+              <time title="创建于：2018-09-27 09:03:17" itemprop="dateCreated datePublished" datetime="2018-09-27T09:03:17+08:00">2018-09-27</time>
             
 
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="更新于：2018-09-21 10:20:52" itemprop="dateModified" datetime="2018-09-21T10:20:52+08:00">2018-09-21</time>
-              
             
           </span>
 
@@ -467,18 +465,64 @@
       
 
       
-        <p><a href="https://i.loli.net/2018/07/26/5b58d6ad8c43c.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2018/07/26/5b58d6ad8c43c.png" alt="images.png"></a></p>
-<p>前两天入门了一下MySQL,毕竟市场上使用率最高的数据库。</p>
-<p>我觉得吧，数据库就是一个存放和管理数据的仓库，就像商品被分类存放在不同的仓库一样，这里不过是把商品变成了数据。<br><a id="more"></a><br>主要流程就是：</p>
+        <p><em>进程相关操作，很好的提高效率哦</em></p>
+<hr>
+<p>进程： 执行中的程序<br>当程序以可执行文件存放在存储中，并且运行的时候，每个进程都会被动态的分配</p>
 <ol>
-<li>建立数据库，A库，B库， C库等</li>
-<li>建立库中的表，向EXCEL中的表一样，A库甲表，A库乙表，B库丙表</li>
-<li>建立表的列，就是分类，例如：名字、ID、电话等</li>
-<li>给列分配数据</li>
-<li>操作表：读取，插入，删除等</li>
+<li>系统资源</li>
+<li>内存</li>
+<li>安全属性</li>
+<li>与之相关的状态<a id="more"></a>
+多个进程可以关联到同一个程序，并同时执行不会互相干扰。操作系统会有效的管理和追踪所有运行着的进程</li>
 </ol>
-<p>这就是一个大概的操作流程，我觉得只要多用，具体的参数都是可以熟悉的。</p>
-<p>至于更深层次的学习挖掘，日后吧。</p>
+<p>为了管理这些进程，用户应该能够：</p>
+<ol>
+<li>查看所有运行中的进程</li>
+<li>查看进程消耗的资源</li>
+<li>定位个别进程并且对其执行制定操作</li>
+<li>改变进程的优先级</li>
+<li>杀死指定进程</li>
+<li>限制进程可用的系统资源等</li>
+</ol>
+<p>Linux提供了许多命令来让用户高效掌控上述的操作</p>
+<h1 id="ps"><a href="#ps" class="headerlink" title="ps"></a>ps</h1><p>linux中最基础的浏览系统中的进程的命令。能列出系统中运行的进程，包括进程号、命令、CPU使用量、内存使用量等。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps -a   #列出所有运行中/激活进程</span><br></pre></td></tr></table></figure>
+<p><a href="https://i.loli.net/2018/09/27/5bac2987663ca.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2018/09/27/5bac2987663ca.png" alt="162704rlcdzcpj7jdvooq4.png"></a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ps -ef  | grep    -列出需要的进程</span><br><span class="line">ps -aux   -显示进程信息，包括无终端的(x)和针对用户（u）的进程：如USER, PID, %CPU, %MEM等</span><br></pre></td></tr></table></figure>
+<h1 id="pstree"><a href="#pstree" class="headerlink" title="pstree"></a>pstree</h1><p>linux中每一个进程都是由其父进程创建的。此命令以可视化方式显示进程，通过显示进程的树状图来展示进程间的关系。如果指定pid, 那么树的根就是该pid, 不然将会是init(pid:1)</p>
+<p><a href="https://i.loli.net/2018/09/27/5bac29c852582.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2018/09/27/5bac29c852582.png" alt="162705dddkpqkzk1svlvsk.png"></a></p>
+<h1 id="top"><a href="#top" class="headerlink" title="top"></a>top</h1><p>监视系统中不同的进程所使用的资源，提供实时系统状态信息。显示进程的数据包括PID,进程属主、优先级、%CPU、%memory等。可以使用这些显示指示出资源使用量。</p>
+<p><a href="https://i.loli.net/2018/09/27/5bac29f80032b.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2018/09/27/5bac29f80032b.png" alt="162705cvzpfd13kugv9321.png"></a></p>
+<h1 id="htop"><a href="#htop" class="headerlink" title="htop"></a>htop</h1><p>交互式的文本模式的进程查看器。通过文字图形化的显示每一个进程的CPU和内存使用量、swap使用量。使用上下光标键选择进程，F7和F8改变优先级，F9杀死进程。htop不是系统默认安装的，所以需要额外安装。</p>
+<p><a href="https://i.loli.net/2018/09/27/5bac2a1e5a9c7.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2018/09/27/5bac2a1e5a9c7.png" alt="162706whldzplwhdhjzogd.png"></a></p>
+<h1 id="nice"><a href="#nice" class="headerlink" title="nice"></a>nice</h1><p>设置和改变进程的优先级。提高一个进程的优先级，内核会分配更多CPU时间片给这个进程。默认情况：进程以0的优先级启动。进程优先级可以通过top命令显示的NI（nice value）列查看。<br>进程优先级值得范围（-20-19）。值越低，优先级越高</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nice&lt;优先值&gt;&lt;进程名&gt;  -通过给定的优先值启动一个程序</span><br></pre></td></tr></table></figure>
+<p><a href="https://i.loli.net/2018/09/27/5bac2a69aec31.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2018/09/27/5bac2a69aec31.png" alt="162706e37l4xnnqcebwt7o.png"></a></p>
+<p><a href="https://i.loli.net/2018/09/27/5bac2a78d5121.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2018/09/27/5bac2a78d5121.png" alt="162707o1aunhs47whehs1s.png"></a></p>
+<h1 id="renice"><a href="#renice" class="headerlink" title="renice"></a>renice</h1><p>改变正在运行的进程的优先值, 注意，只能改变属于他们自己的进程的优先值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">renice -n -p - 改变指定进程的优先值</span><br></pre></td></tr></table></figure>
+<p><a href="https://i.loli.net/2018/09/27/5bac2a9f2b421.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2018/09/27/5bac2a9f2b421.png" alt="162708qwie1sateaiw8pae.png"></a></p>
+<p>初始值为0的3805号进程的优先值变成了4</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">renice -u -g - 通过指定用户和组来改变进程优先值</span><br></pre></td></tr></table></figure>
+<p><a href="https://i.loli.net/2018/09/27/5bac2ac4045c9.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2018/09/27/5bac2ac4045c9.png" alt="162708bvw9hvh6o8vookv4.png"></a><br>用户为”mint”的所有进程优先值变为-3</p>
+<h1 id="Kill"><a href="#Kill" class="headerlink" title="Kill"></a>Kill</h1><p>发送信号来结束进程。如果一个进程没有响应杀死命令，着也许就需要强制杀死，使用-9参数来执行。注意，强制杀死的时候一定要小心，因为进程没有时机清理现场，也许写入文件没有完成。如果不知道进程PID或者打算用名字杀死进程的时候，killall就能派上用场。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">kill &lt;pid&gt;</span><br><span class="line">kill -9 &lt;pid&gt;</span><br><span class="line">killall -9 - 杀死所有拥有同样名字的进程</span><br></pre></td></tr></table></figure>
+<p>如果使用kill,你需要知道进程ID号，pkill是类似的命令，但使用模式匹配，如进程名，进程拥有者等</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pkill &lt;进程名&gt;</span><br></pre></td></tr></table></figure>
+<p><a href="https://i.loli.net/2018/09/27/5bac2b171348d.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2018/09/27/5bac2b171348d.png" alt="162709nitkiffzqimm1zpp.png"></a></p>
+<p><a href="https://i.loli.net/2018/09/27/5bac2b1725c22.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2018/09/27/5bac2b1725c22.png" alt="162709g253s5teo3335jze.png"></a></p>
+<h1 id="ulimit"><a href="#ulimit" class="headerlink" title="ulimit"></a>ulimit</h1><p>控制系统资源在shell和进程上的分配量。对于系统管理员是最有用的，可以管理重度使用和存在性能问题的系统。限制资源大小可以确保重要进程持续运行，其他进程不会占用过多资源。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ulimit -a - 显示当前用户关联的资源限制</span><br></pre></td></tr></table></figure>
+<p><a href="https://i.loli.net/2018/09/27/5bac2b44a954e.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2018/09/27/5bac2b44a954e.png" alt="162709oj6fxr1l9fg1h6qe.png"></a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-f - 最大文件尺寸大小</span><br><span class="line">-v - 最大虚拟内存大小（KB）</span><br><span class="line">-n - 增加最大文件描述符数量</span><br><span class="line">-H : 改变和报告硬限制</span><br><span class="line">-S : 改变和报告软限制</span><br></pre></td></tr></table></figure>
+<h1 id="w"><a href="#w" class="headerlink" title="w"></a>w</h1><p>提供当前登录的用户及其正在执行的进程的信息。显示信息头包含信息，如当前的时间、系统运行时长、登录用户总数、过去的1/5/15分钟内的负载均衡数。<br>基于这些用户信息，用户在终止不属于他们的进程时要小心。</p>
+<p><a href="https://i.loli.net/2018/09/27/5bac2b7feabc2.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2018/09/27/5bac2b7feabc2.png" alt="162710eccrsjsqhft1j6cq.png"></a><br>who 时类似命令，提供当前登录用户列表、系统启动时间、运行级别。</p>
+<p><a href="https://i.loli.net/2018/09/27/5bac2b800a616.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2018/09/27/5bac2b800a616.png" alt="162711bmn4zyomhl5zma5a.png"></a><br>whoami命令输出当前用户ID</p>
+<p><a href="https://i.loli.net/2018/09/27/5bac2b800bed2.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2018/09/27/5bac2b800bed2.png" alt="162710gagjy3crv66svba3.png"></a></p>
+<h1 id="pgrep"><a href="#pgrep" class="headerlink" title="pgrep"></a>pgrep</h1><p>进程号全局正则匹配输出。扫描当前运行进程，然后按照命令匹配条件列出匹配结果到标准输出。对于通过名字检索进程号时很有用的。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pgrep -u mint sh</span><br></pre></td></tr></table></figure>
+<p>这个命令会显示用户为“mint”和进程名为”sh”的进程ID</p>
+<p><a href="https://i.loli.net/2018/09/27/5bac2bb4393da.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2018/09/27/5bac2bb4393da.png" alt="162711azncon8i4ijrqc8n.png"></a></p>
 
       
     </div>
@@ -494,7 +538,7 @@
     
       <div>
         <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-  <div>码字不易，支持原创，请我喝杯咖啡吧！</div>
+  <div>码字不易，支持分享，来杯咖啡帮我提提神！</div>
   <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
     <span>打赏</span>
   </button>
@@ -528,7 +572,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/MySQL/" rel="tag"># MySQL</a>
+            <a href="/tags/Linux/" rel="tag"># Linux</a>
           
         </div>
       
@@ -541,8 +585,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/22/终于！把个人博客搭建起来了！/终于！把个人博客搭建起来了！/" rel="next" title="终于~把个人博客搭建起来了！">
-                <i class="fa fa-chevron-left"></i> 终于~把个人博客搭建起来了！
+              <a href="/2018/09/27/errors/" rel="next" title="python中的error和exception基础">
+                <i class="fa fa-chevron-left"></i> python中的error和exception基础
               </a>
             
           </div>
@@ -550,10 +594,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/07/25/git/git/" rel="prev" title="git基本操作">
-                git基本操作 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -623,7 +663,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">17</span>
+                    <span class="site-state-item-count">18</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -652,6 +692,8 @@
                 <div class="site-state-item site-state-tags">
                   <a href="/tags/index.html">
                     
+                    
+                      
                     
                       
                     
