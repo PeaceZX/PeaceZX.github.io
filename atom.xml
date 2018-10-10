@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>peacezx的博客-一个95后后端开发程序员</title>
+  <title>peacezx&#39;blog</title>
   
   <subtitle>华为上研所-消费者BG软件开发</subtitle>
   <link href="/atom.xml" rel="self"/>
@@ -10,7 +10,7 @@
   <id>http://PeaceZX.github.io/</id>
   
   <author>
-    <name>dake song</name>
+    <name>peacezx</name>
     
   </author>
   
